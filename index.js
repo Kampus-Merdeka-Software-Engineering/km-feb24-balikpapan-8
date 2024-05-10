@@ -1,5 +1,5 @@
 var data = {
-    labels: ['Germany', 'France', 'United Kingdom'],
+    labels: ['Germany', 'France', 'UK'],
     datasets: [{
       data: [32.1, 28.5, 39.4 ],
       backgroundColor: [
