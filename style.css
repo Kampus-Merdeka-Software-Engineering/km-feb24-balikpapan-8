@@ -4,6 +4,31 @@ html, body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+
+.side-nav nav ul li a {
+  display: inline-block; 
+  width: 100%; 
+  padding: 10px; 
+  margin: 0; 
+  text-decoration: none;
+}
+
+.side-nav nav ul li a:hover {
+  background-color: #ccc; 
+}
+
+.side-nav nav ul li a p {
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.side-nav nav ul li a:hover p {
+  transform: scale(1.1); 
+}
+
+
+
+
 .container-third-row {
   display: flex;
   flex-direction: row;
