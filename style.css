@@ -1,44 +1,155 @@
-html, body{
-    padding: 0;
-    margin: 0;
-}
-.container-third-row{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.table-top-product, .table-gender {
-    margin: 50px auto;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow-x: auto;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  thead {
-    background-color: #FFD700;
-    color: black;
-  }
-  
-  th, td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
+.container-third-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-color: #000000;
+  padding-right: 20px;
+  margin-left: 220px; /* Give left margin to prevent content overlap with side nav */
+}
+
+.container-first-row,
+.container-second-row,
+.container-third-row {
+  margin-left: 220px; /* Give left margin to prevent content overlap with side nav */
+}
+
+.table-top-product,
+.table-gender {
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  justify-content: space-around;
+  overflow-x: auto;
+  margin-right: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #FFD700;
+  color: black;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#myPieChart {
+  max-width: 300px;
+  margin: 0 auto;
+  margin-left: 20px;
+}
+
+.side-nav {
+  width: 100px;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 30px 15px;
+  background: yellow;
+  backdrop-filter: blur(5px);
+  transition: width 0.5s;
+  margin-left: left;
+  float: left;
+}
+
+ul {
+  list-style: none;
+  padding: 0 15px;
+}
+
+ul li {
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+ul li p {
+  white-space: nowrap;
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.side-nav:hover {
+  width: 250px;
+}
+
+.side-nav:hover ul li p {
+  display: block;
+}
+
+.side-nav:hover image {
+  margin-right: au;
+}
+
+.Dashboard div {
+  display: none;
+}
+
+.Dashboard-images {
+  width: 40px;
+  border-radius: 50%;
+  margin: auto;
+  align-items: center;
+}
+
+/* Mobile Styles */
+/* Styling for smaller screens */
+@media only screen and (max-width: 1024px) {
+  .container-third-row {
+      flex-direction: column;
+      padding-right: 0;
+      justify-content: center;
   }
 
+  .container-first-row,
+  .container-second-row,
+  .container-third-row {
+      margin-left: 0; /* Reset left margin for mobile */
+  }
+
+  .table-top-product,
+  .table-gender,
   #myPieChart {
-    max-width: 300px;
-    margin: 0 auto;
+      margin-right: 0;
+      
   }
-  
+
+  .side-nav {
+      width: 60px; /* Reduce sidebar width on mobile devices */
+      padding: 15px 5px;
+  }
+
+  ul li {
+      margin: 10px 0;
+  }
+
+  ul li p {
+      display: inline-block;
+      margin-left: 10px;
+  }
+}
