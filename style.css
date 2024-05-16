@@ -10,41 +10,98 @@ body {
     display: block;
 }
 
-.container-first-row {
+.container-first-row{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
     border-color: #000000;
-    padding-right: 20px;
-    margin-left: 220px;
-    /* Give left margin to prevent content overlap with side nav */
+   
+}
+.container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .score-cards,
+  .selectors {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dua kolom */
+    gap: 20px;
+    display: flex;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .score-card-revenue,
+  .score-card-profit
+   {
+    
+    background-color: #f0f0f0;
+    padding: 50px;
+    border-radius: 5px;
+    height: 100px;
+    width: 100px;
+  }
+  .score-card-item{
+    background-color: #f0f0f0; 
+    padding: 50px;
+    border-radius: 5px;
+    height: 100px;
+    width: 150px;
+
+  }
+  
+  .select-country,
+  .select-year {
+    padding-top: 80px;
+    grid-column: span 2; /* Memperluas elemen untuk mengisi dua kolom */
+  }
+  
+  label {
+    font-weight: bold;
+  }
+
+  /* Style the select elements */
+.select-country select,
+.select-year select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
 }
 
-.revenue {
-    width: 40%;
-    height: 150px;
+.select-country select:focus,
+.select-year select:focus {
+  border-color: #007bff;
 }
 
-.item-sold {
-    width: 40%;
-    height: 150px;
+
+.select-country select option,
+.select-year select option {
+  background-color: #fff;
+  color: #333;
 }
 
-.profit {
-    width: 40%;
-    height: 150px;
+
+.selectors {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 350px;
 }
 
-.filter-country {
-    width: 30%;
-    height: 75px;
+
+.select-country,
+.select-year {
+  flex-basis: 48%;
 }
 
-.filter-year {
-    width: 30%;
-    height: 75px;
-}
+  
+
 
 .container-second-row {
     display: flex;

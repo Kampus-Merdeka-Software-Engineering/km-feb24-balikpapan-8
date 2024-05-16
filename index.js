@@ -56,7 +56,7 @@ var chartData = {
     datasets: sales.map((countryData, index) => ({
         label: countryData.country,
         data: countryData.values,
-        borderColor: countryData.backgroundColor, // Using the specified backgroundColor for each country
+        // borderColor: countryData.backgroundColor, Using the specified backgroundColor for each country
         borderWidth: 1,
         fill: false
     }))
