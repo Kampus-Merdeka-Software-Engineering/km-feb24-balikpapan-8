@@ -10,98 +10,94 @@ body {
     display: block;
 }
 
-.container-first-row{
+.container-first-row {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     border-color: #000000;
-   
 }
+
 .container {
     display: flex;
     flex-direction: column;
-  }
-  
-  .score-cards,
-  .selectors {
+}
+
+.score-cards,
+.selectors {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dua kolom */
+    grid-template-columns: repeat(2, 1fr);
+    /* Dua kolom */
     gap: 20px;
     display: flex;
     text-align: center;
     margin-top: 50px;
-  }
-  
-  .score-card-revenue,
-  .score-card-profit
-   {
-    
+}
+
+.score-card-revenue,
+.score-card-profit {
     background-color: #f0f0f0;
     padding: 50px;
     border-radius: 5px;
     height: 100px;
     width: 100px;
-  }
-  .score-card-item{
-    background-color: #f0f0f0; 
+}
+
+.score-card-item {
+    background-color: #f0f0f0;
     padding: 50px;
     border-radius: 5px;
     height: 100px;
     width: 150px;
+}
 
-  }
-  
-  .select-country,
-  .select-year {
+.select-country,
+.select-year {
     padding-top: 80px;
-    grid-column: span 2; /* Memperluas elemen untuk mengisi dua kolom */
-  }
-  
-  label {
-    font-weight: bold;
-  }
+    grid-column: span 2;
+    /* Memperluas elemen untuk mengisi dua kolom */
+}
 
-  /* Style the select elements */
+label {
+    font-weight: bold;
+}
+
+
+/* Style the select elements */
+
 .select-country select,
 .select-year select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f8f8f8;
-  font-size: 16px;
-  outline: none;
-  transition: border-color 0.3s ease-in-out;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
 }
 
 .select-country select:focus,
 .select-year select:focus {
-  border-color: #007bff;
+    border-color: #007bff;
 }
-
 
 .select-country select option,
 .select-year select option {
-  background-color: #fff;
-  color: #333;
+    background-color: #fff;
+    color: #333;
 }
-
 
 .selectors {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  width: 350px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 350px;
 }
-
 
 .select-country,
 .select-year {
-  flex-basis: 48%;
+    flex-basis: 48%;
 }
-
-  
-
 
 .container-second-row {
     display: flex;
@@ -124,30 +120,26 @@ body {
     height: 400px;
 }
 
-
 .side-nav nav ul li a {
-  display: inline-block; 
-  width: 100%; 
-  padding: 10px; 
-  margin: 0; 
-  text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    text-decoration: none;
 }
 
 .side-nav nav ul li a:hover {
-  background-color: #ccc; 
+    background-color: #ccc;
 }
 
 .side-nav nav ul li a p {
-  transition: transform 0.3s ease;
-  text-align: center;
+    transition: transform 0.3s ease;
+    text-align: center;
 }
 
 .side-nav nav ul li a:hover p {
-  transform: scale(1.1); 
+    transform: scale(1.1);
 }
-
-
-
 
 .container-third-row {
     display: flex;
@@ -272,6 +264,20 @@ a {
 /* Styling for smaller screens */
 
 @media only screen and (max-width: 1024px) {
+    .container-first-row {
+        flex-direction: column;
+        padding-right: 0;
+        justify-content: center;
+    }
+    .score-cards {
+        flex-direction: row;
+        padding-left: 70px;
+    }
+    .container-second-row {
+        flex-direction: column;
+        padding-right: 0;
+        justify-content: center;
+    }
     .container-third-row {
         flex-direction: column;
         padding-right: 0;
@@ -292,6 +298,51 @@ a {
         width: 60px;
         /* Reduce sidebar width on mobile devices */
         padding: 15px 5px;
+    }
+    ul li {
+        margin: 10px 0;
+    }
+    ul li p {
+        display: inline-block;
+        margin-left: 10px;
+    }
+}
+
+@media only screen and (min-width: 1990px) {
+    .container-third-row {
+        flex-direction: row;
+        padding-right: 0;
+        padding-left: 190px;
+        justify-content: center;
+    }
+    .container-first-row {
+        flex-direction: row;
+        padding-right: 0;
+        padding-left: 190px;
+        justify-content: center;
+    }
+    .container-second-row {
+        flex-direction: row;
+        padding-left: 190px;
+        justify-content: center;
+    }
+    .container-first-row,
+    .container-second-row,
+    .container-third-row {
+        margin-left: 0;
+        padding-right: 100px;
+        /* Reset left margin for mobile */
+    }
+    .table-top-product,
+    .table-gender,
+    #myPieChart {
+        margin-right: 50px;
+    }
+    .side-nav {
+        width: 150px;
+        /* Reduce sidebar width on mobile devices */
+        padding: 15px 5px;
+        border-right: 2px solid black;
     }
     ul li {
         margin: 10px 0;
