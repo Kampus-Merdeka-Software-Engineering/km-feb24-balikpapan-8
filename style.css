@@ -1,70 +1,66 @@
 html,
 body {
-    padding: 0;
-    margin: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .main-container {
-    width: 100%;
-    display: block;
+  width: 100%;
+  display: block;
 }
 
-.container-first-row{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    border-color: #000000;
-   
+.container-first-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-color: #000000;
 }
 .container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .score-cards,
-  .selectors {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dua kolom */
-    gap: 20px;
-    display: flex;
-    text-align: center;
-    margin-top: 50px;
-  }
-  
-  .score-card-revenue,
-  .score-card-profit
-   {
-    
-    background-color: #f0f0f0;
-    padding: 50px;
-    border-radius: 5px;
-    height: 100px;
-    width: 100px;
-  }
-  .score-card-item{
-    background-color: #f0f0f0; 
-    padding: 50px;
-    border-radius: 5px;
-    height: 100px;
-    width: 150px;
+  display: flex;
+  flex-direction: column;
+}
 
-  }
-  
-  .select-country,
-  .select-year {
-    padding-top: 80px;
-    grid-column: span 2; /* Memperluas elemen untuk mengisi dua kolom */
-  }
-  
-  label {
-    font-weight: bold;
-  }
+.score-cards,
+.selectors {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dua kolom */
+  gap: 20px;
+  display: flex;
+  text-align: center;
+  margin-top: 50px;
+}
 
-  /* Style the select elements */
+.score-card-revenue,
+.score-card-profit {
+  background-color: yellow;
+  padding: 50px;
+  border-radius: 5px;
+  height: 100px;
+  width: 150px;
+}
+.score-card-item {
+  background-color: yellow;
+  padding: 50px;
+  border-radius: 5px;
+  height: 100px;
+  width: 150px;
+}
+
+.select-country,
+.select-year {
+  padding-top: 80px;
+  grid-column: span 2; /* Memperluas elemen untuk mengisi dua kolom */
+}
+
+label {
+  font-weight: bold;
+}
+
+/* Style the select elements */
 .select-country select,
 .select-year select {
-  width: 100%;
+  width: 150px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -79,13 +75,11 @@ body {
   border-color: #007bff;
 }
 
-
 .select-country select option,
 .select-year select option {
   background-color: #fff;
   color: #333;
 }
-
 
 .selectors {
   display: flex;
@@ -94,47 +88,42 @@ body {
   width: 350px;
 }
 
-
 .select-country,
 .select-year {
   flex-basis: 48%;
 }
 
-  
-
-
 .container-second-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    border-color: #000000;
-    padding-right: 20px;
-    margin-left: 220px;
-    /* Give left margin to prevent content overlap with side nav */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-color: #000000;
+  padding-right: 20px;
+  margin-left: 220px;
+  /* Give left margin to prevent content overlap with side nav */
 }
 
 .sales-trend {
-    width: 70%;
-    height: 400px;
+  width: 70%;
+  height: 400px;
 }
 
 .sales-kategori {
-    width: 25%;
-    height: 400px;
+  width: 25%;
+  height: 400px;
 }
 
-
 .side-nav nav ul li a {
-  display: inline-block; 
-  width: 100%; 
-  padding: 10px; 
-  margin: 0; 
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  margin: 0;
   text-decoration: none;
 }
 
 .side-nav nav ul li a:hover {
-  background-color: #ccc; 
+  background-color: #ccc;
 }
 
 .side-nav nav ul li a p {
@@ -143,161 +132,170 @@ body {
 }
 
 .side-nav nav ul li a:hover p {
-  transform: scale(1.1); 
+  transform: scale(1.1);
 }
 
-
-
-
 .container-third-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    border-color: #000000;
-    padding-right: 20px;
-    margin-left: 220px;
-    /* Give left margin to prevent content overlap with side nav */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-color: #000000;
+  padding-right: 20px;
+  margin-left: 220px;
+  /* Give left margin to prevent content overlap with side nav */
 }
 
 .container-first-row,
 .container-second-row,
 .container-third-row {
-    margin-left: 220px;
-    /* Give left margin to prevent content overlap with side nav */
+  margin-left: 150px;
+  /* Give left margin to prevent content overlap with side nav */
 }
 
 .table-top-product,
 .table-gender {
-    margin: 50px auto;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    justify-content: space-around;
-    overflow-x: auto;
-    margin-right: 20px;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  justify-content: space-around;
+  overflow-x: auto;
+  margin-right: 20px;
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 thead {
-    background-color: #FFD700;
-    color: black;
+  background-color: #ffd700;
+  color: black;
 }
 
 th,
 td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
 }
 
 tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 #myPieChart {
-    max-width: 300px;
-    margin: 0 auto;
-    margin-left: 20px;
+  max-width: 300px;
+  margin: 0 auto;
+  margin-left: 20px;
 }
 
 .side-nav {
-    width: 100px;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    padding: 30px 15px;
-    background: yellow;
-    backdrop-filter: blur(5px);
-    transition: width 0.5s;
-    margin-left: left;
-    float: left;
+  width: 50px;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 30px 15px;
+  background: yellow;
+  backdrop-filter: blur(5px);
+  transition: width 0.5s;
+  margin-left: left;
+  float: left;
 }
 
 ul {
-    list-style: none;
-    padding: 0 15px;
+  list-style: none;
+  padding: 0 15px;
 }
 
 ul li {
-    margin: 30px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 ul li p {
-    white-space: nowrap;
-    display: none;
+  white-space: nowrap;
+  display: none;
 }
 
 a {
-    text-decoration: none;
-    color: #000000;
+  text-decoration: none;
+  color: #000000;
 }
 
 .side-nav:hover {
-    width: 250px;
+  width: 250px;
 }
 
 .side-nav:hover ul li p {
-    display: block;
+  display: block;
 }
 
 .side-nav:hover image {
-    margin-right: au;
+  margin-right: au;
 }
 
 .Dashboard div {
-    display: none;
+  display: none;
 }
 
 .Dashboard-images {
-    width: 40px;
-    border-radius: 50%;
-    margin: auto;
-    align-items: center;
+  width: 40px;
+  border-radius: 50%;
+  margin: auto;
+  align-items: center;
 }
 
+#country,#year{
+    border: none;
+    border-radius: 10px;
+    background-color: yellow;
+    font-weight: bold;
+}
+.range{
+    margin-left: 100px;
+}
 
 /* Mobile Styles */
-
 
 /* Styling for smaller screens */
 
 @media only screen and (max-width: 1024px) {
-    .container-third-row {
-        flex-direction: column;
-        padding-right: 0;
-        justify-content: center;
-    }
-    .container-first-row,
-    .container-second-row,
-    .container-third-row {
-        margin-left: 0;
-        /* Reset left margin for mobile */
-    }
-    .table-top-product,
-    .table-gender,
-    #myPieChart {
-        margin-right: 0;
-    }
-    .side-nav {
-        width: 60px;
-        /* Reduce sidebar width on mobile devices */
-        padding: 15px 5px;
-    }
-    ul li {
-        margin: 10px 0;
-    }
-    ul li p {
-        display: inline-block;
-        margin-left: 10px;
-    }
+  .container-third-row {
+    flex-direction: column;
+    padding-right: 0;
+    justify-content: center;
+  }
+  .container-first-row,
+  .container-second-row,
+  .container-third-row {
+    margin-left: 0;
+    /* Reset left margin for mobile */
+  }
+  .table-top-product,
+  .table-gender,
+  #myPieChart {
+    margin-right: 0;
+  }
+  .side-nav {
+    width: 60px;
+    /* Reduce sidebar width on mobile devices */
+    padding: 15px 5px;
+  }
+  ul li {
+    margin: 10px 0;
+  }
+  ul li p {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  .table-top-product,
+  .table-gender {
+    width: 100px    ;
+  }
 }
