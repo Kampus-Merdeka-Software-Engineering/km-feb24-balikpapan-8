@@ -1,7 +1,70 @@
-html, body {
-  padding: 0;
-  margin: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main-container {
+    width: 100%;
+    display: block;
+}
+
+.container-first-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-color: #000000;
+    padding-right: 20px;
+    margin-left: 220px;
+    /* Give left margin to prevent content overlap with side nav */
+}
+
+.revenue {
+    width: 40%;
+    height: 150px;
+}
+
+.item-sold {
+    width: 40%;
+    height: 150px;
+}
+
+.profit {
+    width: 40%;
+    height: 150px;
+}
+
+.filter-country {
+    width: 30%;
+    height: 75px;
+}
+
+.filter-year {
+    width: 30%;
+    height: 75px;
+}
+
+.container-second-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-color: #000000;
+    padding-right: 20px;
+    margin-left: 220px;
+    /* Give left margin to prevent content overlap with side nav */
+}
+
+.sales-trend {
+    width: 70%;
+    height: 400px;
+}
+
+.sales-kategori {
+    width: 25%;
+    height: 400px;
 }
 
 
@@ -30,151 +93,154 @@ html, body {
 
 
 .container-third-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  border-color: #000000;
-  padding-right: 20px;
-  margin-left: 220px; /* Give left margin to prevent content overlap with side nav */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-color: #000000;
+    padding-right: 20px;
+    margin-left: 220px;
+    /* Give left margin to prevent content overlap with side nav */
 }
 
 .container-first-row,
 .container-second-row,
 .container-third-row {
-  margin-left: 220px; /* Give left margin to prevent content overlap with side nav */
+    margin-left: 220px;
+    /* Give left margin to prevent content overlap with side nav */
 }
 
 .table-top-product,
 .table-gender {
-  margin: 50px auto;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  justify-content: space-around;
-  overflow-x: auto;
-  margin-right: 20px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    justify-content: space-around;
+    overflow-x: auto;
+    margin-right: 20px;
 }
 
 table {
-  width: 100%;
-  border-collapse: collapse;
+    width: 100%;
+    border-collapse: collapse;
 }
 
 thead {
-  background-color: #FFD700;
-  color: black;
+    background-color: #FFD700;
+    color: black;
 }
 
-th, td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
 tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
+    background-color: #f2f2f2;
 }
 
 #myPieChart {
-  max-width: 300px;
-  margin: 0 auto;
-  margin-left: 20px;
+    max-width: 300px;
+    margin: 0 auto;
+    margin-left: 20px;
 }
 
 .side-nav {
-  width: 100px;
-  height: 100%;
-  position: fixed;
-  left: 0;
-  top: 0;
-  padding: 30px 15px;
-  background: yellow;
-  backdrop-filter: blur(5px);
-  transition: width 0.5s;
-  margin-left: left;
-  float: left;
+    width: 100px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 30px 15px;
+    background: yellow;
+    backdrop-filter: blur(5px);
+    transition: width 0.5s;
+    margin-left: left;
+    float: left;
 }
 
 ul {
-  list-style: none;
-  padding: 0 15px;
+    list-style: none;
+    padding: 0 15px;
 }
 
 ul li {
-  margin: 30px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 ul li p {
-  white-space: nowrap;
-  display: none;
+    white-space: nowrap;
+    display: none;
 }
 
 a {
-  text-decoration: none;
-  color: #000000;
+    text-decoration: none;
+    color: #000000;
 }
 
 .side-nav:hover {
-  width: 250px;
+    width: 250px;
 }
 
 .side-nav:hover ul li p {
-  display: block;
+    display: block;
 }
 
 .side-nav:hover image {
-  margin-right: au;
+    margin-right: au;
 }
 
 .Dashboard div {
-  display: none;
+    display: none;
 }
 
 .Dashboard-images {
-  width: 40px;
-  border-radius: 50%;
-  margin: auto;
-  align-items: center;
+    width: 40px;
+    border-radius: 50%;
+    margin: auto;
+    align-items: center;
 }
 
+
 /* Mobile Styles */
+
+
 /* Styling for smaller screens */
+
 @media only screen and (max-width: 1024px) {
-  .container-third-row {
-      flex-direction: column;
-      padding-right: 0;
-      justify-content: center;
-  }
-
-  .container-first-row,
-  .container-second-row,
-  .container-third-row {
-      margin-left: 0; /* Reset left margin for mobile */
-  }
-
-  .table-top-product,
-  .table-gender,
-  #myPieChart {
-      margin-right: 0;
-      
-  }
-
-  .side-nav {
-      width: 60px; /* Reduce sidebar width on mobile devices */
-      padding: 15px 5px;
-  }
-
-  ul li {
-      margin: 10px 0;
-  }
-
-  ul li p {
-      display: inline-block;
-      margin-left: 10px;
-  }
+    .container-third-row {
+        flex-direction: column;
+        padding-right: 0;
+        justify-content: center;
+    }
+    .container-first-row,
+    .container-second-row,
+    .container-third-row {
+        margin-left: 0;
+        /* Reset left margin for mobile */
+    }
+    .table-top-product,
+    .table-gender,
+    #myPieChart {
+        margin-right: 0;
+    }
+    .side-nav {
+        width: 60px;
+        /* Reduce sidebar width on mobile devices */
+        padding: 15px 5px;
+    }
+    ul li {
+        margin: 10px 0;
+    }
+    ul li p {
+        display: inline-block;
+        margin-left: 10px;
+    }
 }
