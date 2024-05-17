@@ -1,177 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard Sales - Section Balikpapan Team 8</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+  </head>
 
-<body>
+  <body>
     <main>
-        <h1 class="range">Yearly Performance</h1>
-        <div class="main-container">
-            <section class="side-nav">
-                <nav>
-                    <div class="Dashboard">
-                        <img src="dashboard-svgrepo-com.svg" class="Dashboard-images">
-                    </div>
-                    <ul>
-                        <li>
-                            <a href="index.html">
-                                <p>Yearly</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="monthly.html">
-                                <p>Monthly</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="daily.html">
-                                <p>Daily</p>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </section>
+      <h1 class="range">Yearly Performance</h1>
+      <div class="main-container">
+        <section class="side-nav">
+          <nav>
+            <div class="Dashboard">
+              <img src="dashboard-svgrepo-com.svg" class="Dashboard-images" />
+            </div>
+            <ul>
+              <li>
+                <a href="index.html">
+                  <p>Yearly</p>
+                </a>
+              </li>
+              <li>
+                <a href="monthly.html">
+                  <p>Monthly</p>
+                </a>
+              </li>
+              <li>
+                <a href="daily.html">
+                  <p>Daily</p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </section>
 
-            <section class="container-first-row">
+        <section class="container-first-row">
+          <div class="score-cards">
+            <div class="score-card-revenue">
+              <h3>Revenue</h3>
+              <p>$12,894,314</p>
+            </div>
 
-                <div class="score-cards">
+            <div class="score-card-profit">
+              <h3>Profit</h3>
+              <p>$4,972,879</p>
+            </div>
 
-                    <div class="score-card-revenue">
-                        <h3>Revenue</h3>
-                        <p>$12,894,314</p>
-                    </div>
+            <div class="score-card-item">
+              <h3>Items Sold</h3>
+              <p>200,815</p>
+            </div>
 
-                    <div class="score-card-profit">
-                        <h3>Profit</h3>
-                        <p>$4,972,879</p>
-                    </div>
+            <div class="selectors">
+              <div class="select-country">
+                <select id="country">
+                  <option value="">Select a country</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="France">France</option>
+                  <option value="Germany">Germany</option>
+                </select>
+              </div>
 
-                    <div class="score-card-item">
-                        <h3>Items Sold</h3>
-                        <p>200,815</p>
-                    </div>
+              <div class="select-year">
+                <select id="year">
+                  <option value="">Select a year</option>
+                  <option value="2015">2015</option>
+                  <option value="2016">2016</option>
+                </select>
+              </div>
 
-                    <div class="selectors">
+              <div id="filteringByCategories">
+                <input type="checkbox" id="accessories" value="Accessories" name="accessories"> <label for="Accessories">Accessories</label>
+                <input type="checkbox" id="bikes" value="Bikes" name="bikes"> <label for="bikes">Bikes</label>
+                <input type="checkbox" id="clothing" value="Clothing" name="clothing"> <label for="clothing">Clothing</label>
 
-                      <div class="select-country">
-                      
-                        <select id="country">
-                            <option value="">Select a country</option>
-                            <option value="United Kingdom">United Kingdom</option>
-                            <option value="France">France</option>
-                            <option value="Germany">Germany</option>
-                        </select>
-                      </div>
-    
-                        <div class="select-year">
-                          <select id="year">
-                            <option value="">Select a year</option>
-                            <option value="2015">2015</option>
-                            <option value="2016">2016</option>
-                         </select>
-                        </div>
-    
-                    </div>
-                    
-            </section>
+              </div>
+            </div>
+          </div>
+        </section>
 
-
-            <section class="container-second-row">
-                <div class="table-top-product sales-trend">
-                    <canvas id="myLineChart" width="100%" height="400"></canvas>
-                </div>
-                <div class="table-gender sales-kategori">
-                    <canvas id="myBarChart"></canvas>
-
-                </div>
-            </section>
-            <section class="container-third-row">
-                <div class="table-top-product">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Product</th>
-                                <th>Country</th>
-                                <th>Gender</th>
-                                <th>Revenue</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Mountain-200 Black,38</td>
-                                <td>UK</td>
-                                <td>M</td>
-                                <td>176.250</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Mountain-200 Black,38</td>
-                                <td>UK</td>
-                                <td>M</td>
-                                <td>176.250</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Mountain-200 Black,38</td>
-                                <td>UK</td>
-                                <td>M</td>
-                                <td>176.250</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="table-gender">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Product</th>
-                                <th>Country</th>
-                                <th>Gender</th>
-                                <th>Profit</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Mountain-200 Black,38</td>
-                                <td>UK</td>
-                                <td>M</td>
-                                <td>76.090</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Mountain-200 Black,38</td>
-                                <td>UK</td>
-                                <td>M</td>
-                                <td>76.090</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Mountain-200 Black,38</td>
-                                <td>UK</td>
-                                <td>M</td>
-                                <td>76.090</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="top-country">
-                    <canvas id="myPieChart" width="400" height="400"></canvas>
-                </div>
-            </section>
-        </div>
+        <section class="container-second-row">
+          <div class="table-top-product sales-trend">
+            <canvas id="myLineChart" width="100%" height="400"></canvas>
+          </div>
+          <div class="table-gender sales-kategori">
+            <canvas id="myBarChart"></canvas>
+          </div>
+        </section>
+        <section class="container-third-row">
+          <div class="table-top-product">
+            <table>
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Product</th>
+                  <th>Country</th>
+                  <th>Gender</th>
+                  <th>Revenue</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Mountain-200 Black,38</td>
+                  <td>UK</td>
+                  <td>M</td>
+                  <td>176.250</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Mountain-200 Black,38</td>
+                  <td>UK</td>
+                  <td>M</td>
+                  <td>176.250</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Mountain-200 Black,38</td>
+                  <td>UK</td>
+                  <td>M</td>
+                  <td>176.250</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-gender">
+            <table>
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Product</th>
+                  <th>Country</th>
+                  <th>Gender</th>
+                  <th>Profit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Mountain-200 Black,38</td>
+                  <td>UK</td>
+                  <td>M</td>
+                  <td>76.090</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Mountain-200 Black,38</td>
+                  <td>UK</td>
+                  <td>M</td>
+                  <td>76.090</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Mountain-200 Black,38</td>
+                  <td>UK</td>
+                  <td>M</td>
+                  <td>76.090</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="top-country">
+            <canvas id="myPieChart" width="400" height="400"></canvas>
+          </div>
+        </section>
+      </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="index.js"></script>
-</body>
-
+  </body>
 </html>
