@@ -1,0 +1,16 @@
+{
+  "productCategory": [
+    {
+      "label": "Accessories",
+      "revenue": 97761800
+    },
+    {
+      "label": "Bikes",
+      "revenue": 481983100
+    },
+    {
+      "label": "Clothing",
+      "revenue": 47583200
+    }
+  ]
+}
