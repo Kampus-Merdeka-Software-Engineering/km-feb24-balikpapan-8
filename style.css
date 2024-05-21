@@ -155,7 +155,7 @@ label {
 .container-first-row,
 .container-second-row,
 .container-third-row {
-    margin-left: 220px;
+    margin-left: 150px;
     /* Give left margin to prevent content overlap with side nav */
 }
 
@@ -176,7 +176,7 @@ table {
 }
 
 thead {
-    background-color: #FFD700;
+    background-color: #ffd700;
     color: black;
 }
 
@@ -198,7 +198,7 @@ tbody tr:nth-child(even) {
 }
 
 .side-nav {
-    width: 100px;
+    width: 50px;
     height: 100%;
     position: fixed;
     left: 0;
@@ -257,6 +257,18 @@ a {
     align-items: center;
 }
 
+#country,
+#year {
+    border: none;
+    border-radius: 10px;
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.range {
+    margin-left: 100px;
+}
+
 
 /* Mobile Styles */
 
@@ -264,20 +276,6 @@ a {
 /* Styling for smaller screens */
 
 @media only screen and (max-width: 1024px) {
-    .container-first-row {
-        flex-direction: column;
-        padding-right: 0;
-        justify-content: center;
-    }
-    .score-cards {
-        flex-direction: row;
-        padding-left: 70px;
-    }
-    .container-second-row {
-        flex-direction: column;
-        padding-right: 0;
-        justify-content: center;
-    }
     .container-third-row {
         flex-direction: column;
         padding-right: 0;
@@ -298,51 +296,6 @@ a {
         width: 60px;
         /* Reduce sidebar width on mobile devices */
         padding: 15px 5px;
-    }
-    ul li {
-        margin: 10px 0;
-    }
-    ul li p {
-        display: inline-block;
-        margin-left: 10px;
-    }
-}
-
-@media only screen and (min-width: 1990px) {
-    .container-third-row {
-        flex-direction: row;
-        padding-right: 0;
-        padding-left: 190px;
-        justify-content: center;
-    }
-    .container-first-row {
-        flex-direction: row;
-        padding-right: 0;
-        padding-left: 190px;
-        justify-content: center;
-    }
-    .container-second-row {
-        flex-direction: row;
-        padding-left: 190px;
-        justify-content: center;
-    }
-    .container-first-row,
-    .container-second-row,
-    .container-third-row {
-        margin-left: 0;
-        padding-right: 100px;
-        /* Reset left margin for mobile */
-    }
-    .table-top-product,
-    .table-gender,
-    #myPieChart {
-        margin-right: 50px;
-    }
-    .side-nav {
-        width: 150px;
-        /* Reduce sidebar width on mobile devices */
-        padding: 15px 5px;
-        border-right: 2px solid black;
     }
     ul li {
         margin: 10px 0;
