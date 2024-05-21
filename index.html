@@ -4,39 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard Sales - Section Balikpapan Team 8</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
   </head>
 
   <body>
     <main>
-      <h1 class="range">Yearly Performance</h1>
       <div class="main-container">
-        <section class="side-nav">
-          <nav>
-            <div class="Dashboard">
-              <img src="dashboard-svgrepo-com.svg" class="Dashboard-images" />
+        <head>
+          <nav class="navbar">
+            <div class="brand-title">Dashboard</div>
+            <a
+              href="javascript:void(0);"
+              class="toggle-button"
+              id="toggle-button"
+            >
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </a>
+            <div class="navbar-links" id="navbar-links">
+              <ul>
+                <li><a href="#yearly">Yearly</a></li>
+                <li><a href="#monthly">Monthly</a></li>
+                <li><a href="#daily">Daily</a></li>
+              </ul>
             </div>
-            <ul>
-              <li>
-                <a href="index.html">
-                  <p>Yearly</p>
-                </a>
-              </li>
-              <li>
-                <a href="monthly.html">
-                  <p>Monthly</p>
-                </a>
-              </li>
-              <li>
-                <a href="daily.html">
-                  <p>Daily</p>
-                </a>
-              </li>
-            </ul>
           </nav>
-        </section>
-
+        </head>
+        <div><h1 id="yearly"class="range">Yearly Performance</h1></div>
         <section class="container-first-row">
           <div class="score-cards">
             <div class="score-card-revenue">
@@ -73,10 +69,22 @@
               </div>
 
               <div id="filteringByCategories">
-                <input type="checkbox" id="accessories" value="Accessories" name="accessories"> <label for="Accessories">Accessories</label>
-                <input type="checkbox" id="bikes" value="Bikes" name="bikes"> <label for="bikes">Bikes</label>
-                <input type="checkbox" id="clothing" value="Clothing" name="clothing"> <label for="clothing">Clothing</label>
-
+                <input
+                  type="checkbox"
+                  id="accessories"
+                  value="Accessories"
+                  name="accessories"
+                />
+                <label for="Accessories">Accessories</label>
+                <input type="checkbox" id="bikes" value="Bikes" name="bikes" />
+                <label for="bikes">Bikes</label>
+                <input
+                  type="checkbox"
+                  id="clothing"
+                  value="Clothing"
+                  name="clothing"
+                />
+                <label for="clothing">Clothing</label>
               </div>
             </div>
           </div>
@@ -168,6 +176,10 @@
           </div>
         </section>
       </div>
+      <div><h1 id = "monthly"class="range">Monthly</h1></div>
+      <section></section>
+      <div><h1 id="daily"class="range">Daily</h1></div>
+      <section></section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="index.js"></script>
