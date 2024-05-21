@@ -1,67 +1,67 @@
-[{
-        "productCategory": [{
-                "label": "Accessories",
-                "revenue": [977618, 1372093]
-            },
-            {
-                "label": "Bikes",
-                "revenue": [4819831, 4607171]
-            },
-            {
-                "label": "Clothing",
-                "revenue": [475832, 641769]
+{
+    "productCategory": [{
+            "label": "Accessories",
+            "revenue": {
+                "2015": 977618.00,
+                "2016": 1372093.00
             }
-        ]
+        },
+        {
+            "label": "Bikes",
+            "revenue": {
+                "2015": 4819831.00,
+                "2016": 4607171.00
+            }
+        },
+        {
+            "label": "Clothing",
+            "revenue": {
+                "2015": 475832.00,
+                "2016": 641769.00
+            }
+        }
+    ],
+    "countryRevenue": [{
+            "label": "United Kingdom",
+            "revenue": {
+                "2015": 2476886.00,
+                "2016": 2600379.00
+            }
+        },
+        {
+            "label": "Germany",
+            "revenue": {
+                "2015": 1925113.00,
+                "2016": 2220143.00
+            }
+        },
+        {
+            "label": "France",
+            "revenue": {
+                "2015": 1871282.00,
+                "2016": 1800511.00
+            }
+        }
+    ],
+    "yearlyRevenue": {
+        "label": "Revenue",
+        "revenue": {
+            "2015": 6273281.00,
+            "2016": 6621033.00
+        }
     },
-
-    {
-        "countryRevenue": [{
-                "label": "United Kingdom",
-                "values": [2476886.00, 2600379.00]
-            },
-            {
-                "label": "Germany",
-                "values": [1925113.00, 2220143.00]
-            },
-            {
-                "label": "France",
-                "values": [1871282.00, 1800511.00]
-            }
-        ]
+    "yearlyProfit": {
+        "label": "Profit",
+        "revenue": {
+            "2015": 2374621.00,
+            "2016": 2598258.00
+        }
     },
-    {
-        "yearlyRevenue": [{
-                "label": 2015,
-                "values": 6273281.00
-            },
-            {
-                "label": 2016,
-                "values": 6621033.00
-            }
-        ]
-    },
-
-    {
-        "yearlyProfite": [{
-                "label": 2015,
-                "values": 2374621.00
-            },
-            {
-                "label": 2016,
-                "values": 2598258.00
-            }
-        ]
-    },
-    {
-        "yearlyItemSold": [{
-                "label": 2015,
-                "values": 84708
-            },
-            {
-                "label": 2016,
-                "values": 116107
-            }
-        ]
+    "yearlyItemSold": {
+        "label": "itemSold",
+        "revenue": {
+            "2015": 84708,
+            "2016": 116107
+        }
     }
-
-]
+}
