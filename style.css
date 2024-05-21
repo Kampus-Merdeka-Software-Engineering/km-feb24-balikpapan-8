@@ -5,6 +5,101 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: yellow;
+  padding: 1rem;
+  position: relative;
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  color: black;
+  font-weight: black;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.navbar-links ul li {
+  margin: 0 1rem;
+}
+
+.navbar-links ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  color: #000000;
+  font-weight: bold;
+}
+
+.toggle-button {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+.navbar-links.active {
+  display: flex;
+  flex-direction: column;
+}
+.toggle-button.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.toggle-button.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.toggle-button.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.section {
+  padding: 100px 20px; /* Adding padding to ensure sections are visible below the fixed navbar */
+  margin-top: 60px; /* Adjust based on your navbar height */
+  height: 100vh;
+}
+
+.section:nth-child(odd) {
+  background-color: #f4f4f4;
+}
+
+.section:nth-child(even) {
+  background-color: #e2e2e2;
+}
+
+.section {
+  padding: 100px 20px; /* Adding padding to ensure sections are visible below the fixed navbar */
+  margin-top: 60px; /* Adjust based on your navbar height */
+  height: 100vh;
+}
+
+.section:nth-child(odd) {
+  background-color: #f4f4f4;
+}
+
+.section:nth-child(even) {
+  background-color: #e2e2e2;
+}
+
+.navbar-links.active {
+  display: flex;
+  flex-direction: column;
+}
 .main-container {
   width: 100%;
   display: block;
@@ -47,12 +142,6 @@ body {
   width: 150px;
 }
 
-.select-country,
-.select-year {
-  padding-top: 80px;
-  grid-column: span 2; /* Memperluas elemen untuk mengisi dua kolom */
-}
-
 label {
   font-weight: bold;
 }
@@ -68,6 +157,7 @@ label {
   font-size: 16px;
   outline: none;
   transition: border-color 0.3s ease-in-out;
+  display: flex;
 }
 
 .select-country select:focus,
@@ -100,9 +190,10 @@ label {
   justify-content: space-around;
   align-items: center;
   border-color: #000000;
-  padding-right: 20px;
-  margin-left: 220px;
-  /* Give left margin to prevent content overlap with side nav */
+ 
+  margin-left: 80px;
+  border-radius: 10px;
+  border: #000000;
 }
 
 .sales-trend {
@@ -115,27 +206,6 @@ label {
   height: 400px;
 }
 
-.side-nav nav ul li a {
-  display: inline-block;
-  width: 100%;
-  padding: 10px;
-  margin: 0;
-  text-decoration: none;
-}
-
-.side-nav nav ul li a:hover {
-  background-color: #ccc;
-}
-
-.side-nav nav ul li a p {
-  transition: transform 0.3s ease;
-  text-align: center;
-}
-
-.side-nav nav ul li a:hover p {
-  transform: scale(1.1);
-}
-
 .container-third-row {
   display: flex;
   flex-direction: row;
@@ -143,15 +213,7 @@ label {
   align-items: center;
   border-color: #000000;
   padding-right: 20px;
-  margin-left: 220px;
-  /* Give left margin to prevent content overlap with side nav */
-}
-
-.container-first-row,
-.container-second-row,
-.container-third-row {
-  margin-left: 150px;
-  /* Give left margin to prevent content overlap with side nav */
+  margin-left: 90px;
 }
 
 .table-top-product,
@@ -192,20 +254,6 @@ tbody tr:nth-child(even) {
   margin-left: 20px;
 }
 
-.side-nav {
-  width: 50px;
-  height: 100%;
-  position: fixed;
-  left: 0;
-  top: 0;
-  padding: 30px 15px;
-  background: yellow;
-  backdrop-filter: blur(5px);
-  transition: width 0.5s;
-  margin-left: left;
-  float: left;
-}
-
 ul {
   list-style: none;
   padding: 0 15px;
@@ -229,74 +277,37 @@ a {
   color: #000000;
 }
 
-.side-nav:hover {
-  width: 250px;
+#country,
+#year {
+  border: none;
+  border-radius: 10px;
+  background-color: yellow;
+  font-weight: bold;
+}
+.range {
+  margin-left: 100px;
 }
 
-.side-nav:hover ul li p {
-  display: block;
-}
-
-.side-nav:hover image {
-  margin-right: au;
-}
-
-.Dashboard div {
-  display: none;
-}
-
-.Dashboard-images {
-  width: 40px;
-  border-radius: 50%;
-  margin: auto;
-  align-items: center;
-}
-
-#country,#year{
-    border: none;
-    border-radius: 10px;
-    background-color: yellow;
-    font-weight: bold;
-}
-.range{
-    margin-left: 100px;
-}
-
-/* Mobile Styles */
-
-/* Styling for smaller screens */
-
-@media only screen and (max-width: 1024px) {
-  .container-third-row {
+@media (max-width: 1024px) {
+  .navbar-links {
+    display: none;
+    width: 100%;
     flex-direction: column;
-    padding-right: 0;
-    justify-content: center;
   }
-  .container-first-row,
-  .container-second-row,
-  .container-third-row {
-    margin-left: 0;
-    /* Reset left margin for mobile */
+
+  .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
   }
-  .table-top-product,
-  .table-gender,
-  #myPieChart {
-    margin-right: 0;
+
+  .navbar-links ul li {
+    text-align: center;
+    margin: 1rem 0;
   }
-  .side-nav {
-    width: 60px;
-    /* Reduce sidebar width on mobile devices */
-    padding: 15px 5px;
-  }
-  ul li {
-    margin: 10px 0;
-  }
-  ul li p {
-    display: inline-block;
-    margin-left: 10px;
-  }
-  .table-top-product,
-  .table-gender {
-    width: 100px    ;
+
+  .toggle-button {
+    display: flex;
+    position: absolute;
+    right: 1rem;
   }
 }
