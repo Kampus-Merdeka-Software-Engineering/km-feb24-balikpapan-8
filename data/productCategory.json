@@ -1,16 +1,67 @@
-{
-  "productCategory": [
+[{
+        "productCategory": [{
+                "label": "Accessories",
+                "revenue": [977618, 1372093]
+            },
+            {
+                "label": "Bikes",
+                "revenue": [4819831, 4607171]
+            },
+            {
+                "label": "Clothing",
+                "revenue": [475832, 641769]
+            }
+        ]
+    },
+
     {
-      "label": "Accessories",
-      "revenue": 97761800
+        "countryRevenue": [{
+                "label": "United Kingdom",
+                "values": [2476886.00, 2600379.00]
+            },
+            {
+                "label": "Germany",
+                "values": [1925113.00, 2220143.00]
+            },
+            {
+                "label": "France",
+                "values": [1871282.00, 1800511.00]
+            }
+        ]
     },
     {
-      "label": "Bikes",
-      "revenue": 481983100
+        "yearlyRevenue": [{
+                "label": 2015,
+                "values": 6273281.00
+            },
+            {
+                "label": 2016,
+                "values": 6621033.00
+            }
+        ]
+    },
+
+    {
+        "yearlyProfite": [{
+                "label": 2015,
+                "values": 2374621.00
+            },
+            {
+                "label": 2016,
+                "values": 2598258.00
+            }
+        ]
     },
     {
-      "label": "Clothing",
-      "revenue": 47583200
-    }
-  ]
-}
+        "yearlySold": [{
+                "label": 2015,
+                "values": 2374621.00
+            },
+            {
+                "label": 2016,
+                "values": 2598258.00
+            }
+        ]
+    },
+
+]
