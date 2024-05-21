@@ -53,15 +53,15 @@
         ]
     },
     {
-        "yearlySold": [{
+        "yearlyItemSold": [{
                 "label": 2015,
-                "values": 2374621.00
+                "values": 84708
             },
             {
                 "label": 2016,
-                "values": 2598258.00
+                "values": 116107
             }
         ]
-    },
+    }
 
 ]
