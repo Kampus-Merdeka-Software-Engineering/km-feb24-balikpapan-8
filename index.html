@@ -42,21 +42,21 @@
 
             <div class="score-card-profit">
               <h3>Profit</h3>
-              <p>$4,972,879</p>
+              <p id="profit"></p>
             </div>
 
             <div class="score-card-item">
               <h3>Items Sold</h3>
-              <p>200,815</p>
+              <p id="Item-sold"></p>
             </div>
 
             <div class="selectors">
-              <div class="select-country">
+              <div class="select-country" onclick="country()">
                 <select id="country">
                   <option value="">Select a country</option>
-                  <option value="United Kingdom">United Kingdom</option>
-                  <option value="France">France</option>
-                  <option value="Germany">Germany</option>
+                  <option id ="UK" name ="country"value="United Kingdom">United Kingdom</option>
+                  <option id ="FR" name ="country"value="France">France</option>
+                  <option id ="GR" name ="country"value="Germany">Germany</option>
                 </select>
               </div>
 
@@ -67,7 +67,6 @@
                   <option value="2016">2016</option>
                 </select>
               </div>
-
               <div id="filteringByCategories">
                 <input
                   type="checkbox"
@@ -176,12 +175,9 @@
           </div>
         </section>
       </div>
-      <div><h1 id="monthly" class="range">Monthly</h1></div>
-      <section></section>
-      <div><h1 id="daily" class="range">Daily</h1></div>
-      <section></section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="index.js"></script>
+    <script src="style.js"></script>
   </body>
 </html>
