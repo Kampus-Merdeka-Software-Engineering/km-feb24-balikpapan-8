@@ -79,24 +79,24 @@
         {
             "label": "Profit",
             "year": "2015",
-            "revenue": 2374621.00
+            "profit": 2374621.00
         },
         {
             "label": "Profit",
             "year": "2016",
-            "revenue": 2598258.00
+            "profit": 2598258.00
         }
     ],
     "yearlyItemSold": [
         {
             "label": "itemSold",
             "year": "2015",
-            "revenue": 84708
+            "quantityOrdered": 84708
         },
         {
             "label": "itemSold",
             "year": "2016",
-            "revenue": 116107
+            "quantityOrdered": 116107
         }
     ]
 }

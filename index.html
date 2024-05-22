@@ -14,6 +14,11 @@
     <main>
         <div class="main-container">
 
+
+            <div class="score-card-profit">
+              <h3>Profit</h3>
+              <p id="profit"></p>
+
             <head>
                 <nav class="navbar">
                     <div class="brand-title">Dashboard</div>
@@ -33,6 +38,7 @@
             </head>
             <div>
                 <h1 id="yearly" class="range">Yearly Performance</h1>
+
             </div>
             <section class="container-first-row">
                 <div class="score-cards">
@@ -40,6 +46,15 @@
                         <h3>Revenue</h3>
                         <p id="Revenue"></p>
                     </div>
+
+            <div class="score-card-item">
+              <h3>Items Sold</h3>
+              <p id="Item-sold"></p>
+            </div>
+
+            <div class="selectors">
+              <div class="select-country" onclick="country()">
+                <select id="country">
 
                     <div class="score-card-profit">
                         <h3>Profit</h3>
@@ -62,10 +77,11 @@
                     <div class="selectors">
                         <div class="select-country">
                             <select id="country">
+
                   <option value="">Select a country</option>
-                  <option value="United Kingdom">United Kingdom</option>
-                  <option value="France">France</option>
-                  <option value="Germany">Germany</option>
+                  <option id ="UK" name ="country"value="United Kingdom">United Kingdom</option>
+                  <option id ="FR" name ="country"value="France">France</option>
+                  <option id ="GR" name ="country"value="Germany">Germany</option>
                 </select>
                         </div>
 
@@ -75,6 +91,123 @@
                   <option value="2015">2015</option>
                   <option value="2016">2016</option>
                 </select>
+
+              </div>
+              <div id="filteringByCategories">
+                <input
+                  type="checkbox"
+                  id="accessories"
+                  value="Accessories"
+                  name="accessories"
+                />
+                <label for="Accessories">Accessories</label>
+                <input type="checkbox" id="bikes" value="Bikes" name="bikes" />
+                <label for="bikes">Bikes</label>
+                <input
+                  type="checkbox"
+                  id="clothing"
+                  value="Clothing"
+                  name="clothing"
+                />
+                <label for="clothing">Clothing</label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="container-second-row">
+          <div class="table-top-product sales-trend">
+            <canvas id="myLineChart" width="100%" height="400"></canvas>
+          </div>
+          <div class="table-gender sales-kategori">
+            <canvas id="myBarChart"></canvas>
+          </div>
+        </section>
+        <section class="container-third-row">
+          <div class="table-top-product">
+            <table>
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Product</th>
+                  <th>Country</th>
+                  <th>Gender</th>
+                  <th>Revenue</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Mountain-200 Black,38</td>
+                  <td>UK</td>
+                  <td>M</td>
+                  <td>176.250</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Mountain-200 Black,38</td>
+                  <td>UK</td>
+                  <td>M</td>
+                  <td>176.250</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Mountain-200 Black,38</td>
+                  <td>UK</td>
+                  <td>M</td>
+                  <td>176.250</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-gender">
+            <table>
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Product</th>
+                  <th>Country</th>
+                  <th>Gender</th>
+                  <th>Profit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Mountain-200 Black,38</td>
+                  <td>UK</td>
+                  <td>M</td>
+                  <td>76.090</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Mountain-200 Black,38</td>
+                  <td>UK</td>
+                  <td>M</td>
+                  <td>76.090</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Mountain-200 Black,38</td>
+                  <td>UK</td>
+                  <td>M</td>
+                  <td>76.090</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="top-country">
+            <canvas id="myPieChart" width="400" height="400"></canvas>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="index.js"></script>
+    <script src="style.js"></script>
+  </body>
+</html>
+
                         </div>
 
 
@@ -204,3 +337,4 @@
 </body>
 
 </html>
+
