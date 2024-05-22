@@ -140,6 +140,8 @@ totalProfit();
 totalItemSold();
 country();
 
+
+
 let Rev = document.getElementById("Revenue")
 
 fetch("./data/productCategory.json")
@@ -266,4 +268,5 @@ fetch("./data/productCategory.json")
 //   data: lineChartData,
 //   options: lineOptions,
 // });
+
 

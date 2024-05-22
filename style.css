@@ -3,6 +3,8 @@ body {
   padding: 0;
   margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #000000; /* fallback color: black */
+  background-image: linear-gradient(to bottom, #000000, #eff304);
 }
 
 .navbar {
