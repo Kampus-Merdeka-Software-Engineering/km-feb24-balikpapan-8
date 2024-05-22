@@ -1,67 +1,102 @@
-[{
-        "productCategory": [{
-                "label": "Accessories",
-                "revenue": [977618, 1372093]
-            },
-            {
-                "label": "Bikes",
-                "revenue": [4819831, 4607171]
-            },
-            {
-                "label": "Clothing",
-                "revenue": [475832, 641769]
-            }
-        ]
-    },
-
-    {
-        "countryRevenue": [{
-                "label": "United Kingdom",
-                "values": [2476886.00, 2600379.00]
-            },
-            {
-                "label": "Germany",
-                "values": [1925113.00, 2220143.00]
-            },
-            {
-                "label": "France",
-                "values": [1871282.00, 1800511.00]
-            }
-        ]
-    },
-    {
-        "yearlyRevenue": [{
-                "label": 2015,
-                "values": 6273281.00
-            },
-            {
-                "label": 2016,
-                "values": 6621033.00
-            }
-        ]
-    },
-
-    {
-        "yearlyProfite": [{
-                "label": 2015,
-                "values": 2374621.00
-            },
-            {
-                "label": 2016,
-                "values": 2598258.00
-            }
-        ]
-    },
-    {
-        "yearlyItemSold": [{
-                "label": 2015,
-                "values": 84708
-            },
-            {
-                "label": 2016,
-                "values": 116107
-            }
-        ]
-    }
-
-]
+{
+    "productCategory": [
+        {
+            "label": "Accessories",
+            "year": "2015",
+            "revenue": 977618.00
+        },
+        {
+            "label": "Accessories",
+            "year": "2016",
+            "revenue": 1372093.00
+        },
+        {
+            "label": "Bikes",
+            "year": "2015",
+            "revenue": 4819831.00
+        },
+        {
+            "label": "Bikes",
+            "year": "2016",
+            "revenue": 4607171.00
+        },
+        {
+            "label": "Clothing",
+            "year": "2015",
+            "revenue": 475832.00
+        },
+        {
+            "label": "Clothing",
+            "year": "2016",
+            "revenue": 641769.00
+        }
+    ],
+    "countryRevenue": [
+        {
+            "label": "United Kingdom",
+            "year": "2015",
+            "revenue": 2476886.00
+        },
+        {
+            "label": "United Kingdom",
+            "year": "2016",
+            "revenue": 2600379.00
+        },
+        {
+            "label": "Germany",
+            "year": "2015",
+            "revenue": 1925113.00
+        },
+        {
+            "label": "Germany",
+            "year": "2016",
+            "revenue": 2220143.00
+        },
+        {
+            "label": "France",
+            "year": "2015",
+            "revenue": 1871282.00
+        },
+        {
+            "label": "France",
+            "year": "2016",
+            "revenue": 1800511.00
+        }
+    ],
+    "yearlyRevenue": [
+        {
+            "label": "Revenue",
+            "year": "2015",
+            "revenue": 6273281.00
+        },
+        {
+            "label": "Revenue",
+            "year": "2016",
+            "revenue": 6621033.00
+        }
+    ],
+    "yearlyProfit": [
+        {
+            "label": "Profit",
+            "year": "2015",
+            "revenue": 2374621.00
+        },
+        {
+            "label": "Profit",
+            "year": "2016",
+            "revenue": 2598258.00
+        }
+    ],
+    "yearlyItemSold": [
+        {
+            "label": "itemSold",
+            "year": "2015",
+            "revenue": 84708
+        },
+        {
+            "label": "itemSold",
+            "year": "2016",
+            "revenue": 116107
+        }
+    ]
+}
