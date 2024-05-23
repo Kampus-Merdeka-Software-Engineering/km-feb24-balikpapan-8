@@ -3,7 +3,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(180deg, #ffffff, #ffff00); 
+  background: linear-gradient(180deg, #ffffff, #ffff00);
 }
 .darkmode {
   width: 100px;
@@ -12,7 +12,8 @@ body {
   display: block;
   background-color: #ebebeb;
   border-radius: 200px;
-  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),
+    inset 0px -5px 15px rgba(255, 255, 255, 0.4);
   cursor: pointer;
   transition: 0.3s;
 }
@@ -44,10 +45,10 @@ body {
   left: calc(100% - 19px); /* Adjust the left position */
   background: linear-gradient(100deg, #777, #3a3a3a);
 }
-.darkmode:active:after{
+.darkmode:active:after {
   width: 20px;
 }
-.darkmodeInput:checked + .darkmode + body{
+.darkmodeInput:checked + .darkmode + body {
   background-color: white;
 }
 
