@@ -1,5 +1,3 @@
-
-
 // Toggle button functionality
 document.getElementById("toggle-button").addEventListener("click", () => {
   const navbarLinks = document.getElementById("navbar-links");
@@ -16,8 +14,9 @@ function darkmodeToggle() {
   // Set font color to black for salesperformance elements initially
   for (let i = 0; i < salesperformance.length; i++) {
     salesperformance[i].style.color = "black";
+    salesperformance[i].style.transition = "color 0.5s";
   }
-
+  body.style.transition = "background-color 0.5s";
   darkmodeCheckbox.addEventListener("change", () => {
     if (darkmodeCheckbox.checked) {
       console.log("Dark mode is on");
@@ -38,6 +37,3 @@ function darkmodeToggle() {
 }
 
 darkmodeToggle();
-
-
-
