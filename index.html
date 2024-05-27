@@ -35,89 +35,89 @@
             </div>
             <section class="container-first-row">
                 <div class="score-cards">
-                    <div class="score-card-revenue">
+                    <<div class="score-card-revenue">
                         <h3>Revenue</h3>
-                        <p id="Revenue"></p>
-                    </div>
+                        <p class="cardValue" id="Revenue"></p>
+                </div>
 
-                    <div class="score-card-profit">
-                        <h3>Profit</h3>
-                        <p>$4,972,879</p>
-                    </div>
+                <div class="score-card-profit">
+                    <h3>Profit</h3>
+                    <p class="cardValue" id="profit"></p>
+                </div>
 
-                    <div class="score-card-item">
-                        <h3>Items Sold</h3>
-                        <p>200,815</p>
-                    </div>
+                <div class="score-card-item">
+                    <h3>Items Sold</h3>
+                    <p class="cardValue" id="Item-sold"></p>
+                </div>
 
-                    <div class="selectors">
-                        <div class="select-country">
-                            <select id="country">
+                <div class="selectors">
+                    <div class="select-country">
+                        <select id="country">
                   <option value="">Select a country</option>
                   <option value="United Kingdom">United Kingdom</option>
                   <option value="France">France</option>
                   <option value="Germany">Germany</option>
                 </select>
-                        </div>
+                    </div>
 
-                        <div class="select-year">
-                            <select id="year">
+                    <div class="select-year">
+                        <select id="year">
                   <option value="">Select a year</option>
                   <option value="2015">2015</option>
                   <option value="2016">2016</option>
                 </select>
-                        </div>
-
-
                     </div>
+
+
                 </div>
-            </section>
+        </div>
+        </section>
 
-            <section class="container-second-row">
-
-
-                <div class="table-top-product sales-trend">
-                    <div class="filterLine">
-                        <div id="filteringByYear" class="floatright">
-                            <label><input type="checkbox" value="2015"> 2015</label>
-                            <label><input type="checkbox" value="2016"> 2016</label>
-                        </div>
+        <section class="container-second-row">
 
 
-
-
-                        <canvas id="myLineChart" width="80%" height="400"></canvas>
+            <div class="table-top-product sales-trend">
+                <div class="filterLine">
+                    <div id="filteringByYear" class="floatright">
+                        <label><input type="checkbox" value="2015"> 2015</label>
+                        <label><input type="checkbox" value="2016"> 2016</label>
                     </div>
+
+
+
+
+                    <canvas id="myLineChart" width="80%" height="400"></canvas>
                 </div>
+            </div>
 
-                <div class="table-gender sales-kategori">
-                    <center>
-                        <div class="filterBar">
-                            <div id="filteringByCategories">
-                                <input type="checkbox" id="accessories" value="Accessories" name="accessories" />
-                                <label for="Accessories">Accessories</label>
-                                <input type="checkbox" id="bikes" value="Bikes" name="bikes" />
-                                <label for="bikes">Bikes</label>
-                                <input type="checkbox" id="clothing" value="Clothing" name="clothing" />
-                                <label for="clothing">Clothing</label>
+            <div class="table-gender sales-kategori">
+                <center>
+                    <div class="filterBar">
+                        <div id="filteringByCategories">
+                            <input type="checkbox" id="accessories" value="Accessories" name="accessories" />
+                            <label for="Accessories">Accessories</label>
+                            <input type="checkbox" id="bikes" value="Bikes" name="bikes" />
+                            <label for="bikes">Bikes</label>
+                            <input type="checkbox" id="clothing" value="Clothing" name="clothing" />
+                            <label for="clothing">Clothing</label>
 
-                            </div>
-                            <div id="filteringByYears">
-                                <label>
+                        </div>
+                        <div id="filteringByYears">
+                            <label>
                                   <input type="checkbox" value="2015"> 2015
                               </label>
-                                <label>
+                            <label>
                                   <input type="checkbox" value="2016"> 2016
                               </label>
-                            </div>
-
-
-
-                            <canvas id="myBarChart"></canvas>
                         </div>
-                </div>
-                </center>
-        </div>
+
+
+
+                        <canvas id="myBarChart"></canvas>
+                    </div>
+            </div>
+            </center>
+            </div>
         </section>
         <section class="container-third-row">
             <div class="table-top-product">
