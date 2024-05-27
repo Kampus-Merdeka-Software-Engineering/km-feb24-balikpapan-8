@@ -1,205 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard Sales - Section Balikpapan Team 8</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
+</head>
 
-  <body>
+<body>
     <main>
-      <div class="main-container">
-        <header>
-          <nav class="navbar">
-            <div class="brand-title">Dashboard</div>
-            <a
-              href="javascript:void(0);"
-              class="toggle-button"
-              id="toggle-button"
-            >
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
-            </a>
-            <div class="navbar-links" id="navbar-links">
-              <ul>
-                <li>
-                  <input
-                    type="checkbox"
-                    class="darkmodeInput"
-                    id="darkmode-toggle"
-                    value="darkmode"
-                  />
-                  <label class="darkmode" for="darkmode-toggle"></label>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </header>
+        <div class="main-container">
+            <header>
+                <nav class="navbar">
+                    <div class="brand-title">Dashboard</div>
+                    <a href="javascript:void(0);" class="toggle-button" id="toggle-button">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </a>
+                    <div class="navbar-links" id="navbar-links">
+                        <ul>
+                            <li>
+                                <input type="checkbox" class="darkmodeInput" id="darkmode-toggle" value="darkmode" />
+                                <label class="darkmode" for="darkmode-toggle"></label>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
 
-        <h1 id="yearly" class="range">Sales Performance</h1>
+            <h1 id="yearly" class="range">Sales Performance</h1>
 
-        <section class="container-first-row">
-          <div class="score-cards">
-            <div class="score-card-revenue">
-              <h3>Revenue</h3>
-              <p class="cardValue" id="Revenue"></p>
-            </div>
-            <div class="score-card-profit">
-              <h3>Profit</h3>
-              <p class="cardValue" id="profit"></p>
-            </div>
-            <div class="score-card-item">
-              <h3>Items Sold</h3>
-              <p class="cardValue" id="Item-sold"></p>
-            </div>
-          </div>
+            <section class="container-first-row">
+                <div class="score-cards">
+                    <div class="score-card-revenue">
+                        <h3>Revenue</h3>
+                        <p class="cardValue" id="Revenue"></p>
+                    </div>
+                    <div class="score-card-profit">
+                        <h3>Profit</h3>
+                        <p class="cardValue" id="profit"></p>
+                    </div>
+                    <div class="score-card-item">
+                        <h3>Items Sold</h3>
+                        <p class="cardValue" id="Item-sold"></p>
+                    </div>
+                </div>
 
-          <div class="selectors">
-            <div class="select-country">
-              <select id="country">
+                <div class="selectors">
+                    <div class="select-country">
+                        <select id="country">
                 <option value="">Select a country</option>
                 <option value="United Kingdom">United Kingdom</option>
                 <option value="France">France</option>
                 <option value="Germany">Germany</option>
               </select>
-            </div>
-            <div class="select-year">
-              <select id="year">
+                    </div>
+                    <div class="select-year">
+                        <select id="year">
                 <option value="">Select a year</option>
                 <option value="2015">2015</option>
                 <option value="2016">2016</option>
               </select>
-            </div>
-          </div>
-        </section>
-
-        <section class="container-second-row">
-          <div class="table-top-product sales-trend">
-            <div class="filterLine">
-              <div id="filteringByYear" class="floatright">
-                <label><input type="checkbox" value="2015" /> 2015</label>
-                <label><input type="checkbox" value="2016" /> 2016</label>
-              </div>
-              <canvas id="myLineChart" width="80%" height="400"></canvas>
-            </div>
-          </div>
-
-          <div class="table-gender sales-kategori">
-            <center>
-              <div class="filterBar">
-                <div id="filteringByCategories">
-                  <input
-                    type="checkbox"
-                    id="accessories"
-                    value="Accessories"
-                    name="accessories"
-                  />
-                  <label for="accessories">Accessories</label>
-                  <input
-                    type="checkbox"
-                    id="bikes"
-                    value="Bikes"
-                    name="bikes"
-                  />
-                  <label for="bikes">Bikes</label>
-                  <input
-                    type="checkbox"
-                    id="clothing"
-                    value="Clothing"
-                    name="clothing"
-                  />
-                  <label for="clothing">Clothing</label>
+                    </div>
                 </div>
-                <div id="filteringByYears">
-                  <label><input type="checkbox" value="2015" /> 2015</label>
-                  <label><input type="checkbox" value="2016" /> 2016</label>
-                </div>
-                <canvas id="myBarChart"></canvas>
-              </div>
-            </center>
-          </div>
-        </section>
+            </section>
 
-        <section class="container-third-row">
-          <div class="table-top-product">
-            <table>
-              <thead>
-                <tr>
-                  <th>No</th>
-                  <th>Product</th>
-                  <th>Country</th>
-                  <th>Gender</th>
-                  <th>Revenue</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Mountain-200 Black,38</td>
-                  <td>UK</td>
-                  <td>M</td>
-                  <td>176.250</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Mountain-200 Black,38</td>
-                  <td>UK</td>
-                  <td>M</td>
-                  <td>176.250</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Mountain-200 Black,38</td>
-                  <td>UK</td>
-                  <td>M</td>
-                  <td>176.250</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="table-gender">
-            <table>
-              <thead>
-                <tr>
-                  <th>No</th>
-                  <th>Product</th>
-                  <th>Country</th>
-                  <th>Gender</th>
-                  <th>Profit</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Mountain-200 Black,38</td>
-                  <td>UK</td>
-                  <td>M</td>
-                  <td>76.090</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Mountain-200 Black,38</td>
-                  <td>UK</td>
-                  <td>M</td>
-                  <td>76.090</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Mountain-200 Black,38</td>
-                  <td>UK</td>
-                  <td>M</td>
-                  <td>76.090</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="top-country">
-            <canvas id="myPieChart" width="400" height="400"></canvas>
-          </div>
-        </section>
-      </div>
+            <section class="container-second-row">
+
+
+                <div class="table-top-product sales-trend">
+                    <div class="filterLine">
+                        <div id="filteringByYear" class="floatright">
+                            <label><input type="checkbox" value="2015"> 2015</label>
+                            <label><input type="checkbox" value="2016"> 2016</label>
+                        </div>
+
+
+
+
+                        <canvas id="myLineChart" width="80%" height="400"></canvas>
+                    </div>
+                </div>
+
+                <div class="table-gender sales-kategori">
+                    <center>
+                        <div class="filterBar">
+                            <div id="filteringByCategories">
+                                <input type="checkbox" id="accessories" value="Accessories" name="accessories" />
+                                <label for="accessories">Accessories</label>
+                                <input type="checkbox" id="bikes" value="Bikes" name="bikes" />
+                                <label for="bikes">Bikes</label>
+                                <input type="checkbox" id="clothing" value="Clothing" name="clothing" />
+                                <label for="clothing">Clothing</label>
+                            </div>
+                            <div id="filteringByYears">
+                                <label><input type="checkbox" value="2015" /> 2015</label>
+                                <label><input type="checkbox" value="2016" /> 2016</label>
+                            </div>
+                            <canvas id="myBarChart"></canvas>
+                        </div>
+                    </center>
+                </div>
+            </section>
+
+            <section class="container-third-row">
+                <div class="table-top-product">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Product</th>
+                                <th>Country</th>
+                                <th>Gender</th>
+                                <th>Revenue</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mountain-200 Black,38</td>
+                                <td>UK</td>
+                                <td>M</td>
+                                <td>176.250</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Mountain-200 Black,38</td>
+                                <td>UK</td>
+                                <td>M</td>
+                                <td>176.250</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Mountain-200 Black,38</td>
+                                <td>UK</td>
+                                <td>M</td>
+                                <td>176.250</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-gender">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Product</th>
+                                <th>Country</th>
+                                <th>Gender</th>
+                                <th>Profit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mountain-200 Black,38</td>
+                                <td>UK</td>
+                                <td>M</td>
+                                <td>76.090</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Mountain-200 Black,38</td>
+                                <td>UK</td>
+                                <td>M</td>
+                                <td>76.090</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Mountain-200 Black,38</td>
+                                <td>UK</td>
+                                <td>M</td>
+                                <td>76.090</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="top-country">
+                    <canvas id="myPieChart" width="400" height="400"></canvas>
+                </div>
+            </section>
+        </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -207,5 +190,6 @@
     <script src="row2.js"></script>
     <script src="row3.js"></script>
     <script src="style.js"></script>
-  </body>
+</body>
+
 </html>
