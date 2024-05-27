@@ -59,7 +59,18 @@ function country() {
     console.log(`You selected ${selectedCountry} in ${selectedYear}`);
     if (!selectedCountry && !selectedYear) {
       fetchDataAndCalculateTotals();
+     
     }
+    if(selectedYear === "2015"){
+        Rev.textContent = `$${6273281}`
+        prof.textContent = `$${2374621}`
+        Isold.textContent = `${84708}`
+      }
+      else{
+        Rev.textContent = `$${6621033}`
+        prof.textContent = `$${2598258}`
+        Isold.textContent = `${116107}`
+      }
     if (selectedCountry === "United Kingdom" && selectedYear === "2015") {
       console.log("It's UK 2015");
       Rev.textContent = `$${2220143}`;
@@ -126,6 +137,7 @@ function country() {
   countrySelect.addEventListener("change", handleSelectionChange);
   yearSelect.addEventListener("change", handleSelectionChange);
 }
+
 
 fetchDataAndCalculateTotals();
 country();
