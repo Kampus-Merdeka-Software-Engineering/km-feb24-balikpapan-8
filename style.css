@@ -245,6 +245,7 @@ label {
   border-color: #000000;
   border-radius: 10px;
   border: #000000;
+  padding-right: 130px;
 }
 
 .filterLine {
@@ -299,17 +300,29 @@ label {
   margin-left: 60px;
 }
 
-.table-top-product,
+
 .table-gender {
+  width: 400px;
+  height: 400px;
   margin: 50px auto;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  justify-content: space-around;
+  justify-content: space-evenly;
+  align-items: center;
   overflow-x: auto;
-  margin-right: 20px;
 }
-
+.table-top-product{
+  background-color: white;
+  width: 600px;
+  height: 400px;
+  padding-left: 100px;
+  margin: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow-x: auto;
+  border-radius: 10px;
+}
 table {
   width: 100%;
   border-collapse: collapse;
@@ -374,6 +387,43 @@ a {
 .cardValue {
   font-weight: bold;
 }
+
+.barChart {
+  display: flex;
+  width: 400px;
+  height: 200px;
+  border: 2px solid black;
+  padding: 30px;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* .gender{
+  width: 400px;
+  height: 200px;
+/* } */
+/* .wrap-line-chart{
+  display: flex;
+  width: 00px;
+  height: 200px;
+  border: 2px solid black;
+  padding: 30px;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.barchart-category{
+  display: flex;
+  width: 400px;
+  height: 200px;
+  border: 2px solid black;
+  padding: 30px;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+}  */
+
 @media (max-width: 1024px) {
   .navbar-links {
     display: none;
@@ -442,7 +492,22 @@ a {
     flex-direction: column;
     align-items: center;
   }
-
+    .table-gender {
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+  }
+  .table-top-product{
+    background-color: white;
+    width: 300px;
+    height: 400px;
+    padding-left: 100px;
+    margin: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow-x: auto;
+    border-radius: 10px;
+  }
   .score-card-revenue,
   .score-card-profit,
   .score-card-item,
