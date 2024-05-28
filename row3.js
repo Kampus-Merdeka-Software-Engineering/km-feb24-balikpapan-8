@@ -1,3 +1,53 @@
+const barGender = document.getElementById("GenderBarchart");
+const ageBarchart = document.getElementById("ageBarChart");
+function gender() {
+  new Chart(barGender, {
+    type: "bar",
+    data: {
+      labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+      datasets: [
+        {
+          label: "# of Votes",
+          data: [12, 19, 3, 5, 2, 3],
+          borderWidth: 1,
+        },
+      ],
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+        },
+      },
+    },
+  });
+}
+function age() {
+  new Chart(ageBarchart, {
+    type: "bar",
+    data: {
+      labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+      datasets: [
+        {
+          label: "# of Votes",
+          data: [12, 19, 3, 5, 2, 3],
+          borderWidth: 1,
+        },
+      ],
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+        },
+        x: {
+          barPercentage: 0.2,
+        },
+      },
+    },
+  });
+}
+
 var data = {
   labels: ["Germany", "France", "UK"],
   datasets: [
@@ -57,3 +107,6 @@ var chartData = {
     fill: false,
   })),
 };
+
+gender();
+age();
