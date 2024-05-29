@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard Sales - Section Balikpapan Team 8</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"
+    /> -->
   </head>
 
   <body>
     <main>
+      <!-- Navbar -->
       <div class="main-container">
         <header>
           <nav class="navbar">
@@ -42,6 +47,7 @@
         <div class="sales-performance">
           <h1 id="yearly" class="range">Sales Performance</h1>
         </div>
+        <!-- First row -->
         <section class="container-first-row">
           <div class="score-cards">
             <div class="score-card-revenue">
@@ -76,7 +82,7 @@
             </div>
           </div>
         </section>
-
+        <!-- Second Row -->
         <section class="container-second-row">
           <div class="wrap-line-chart">
             <div class="table-top-product sales-trend">
@@ -126,9 +132,9 @@
             </div>
           </div>
         </section>
-
+        <!-- Third row -->
         <section class="container-third-row">
-          <div class="genderChart">
+          <div class="barChart">
             <div>
               <canvas
                 class="gender"
@@ -141,8 +147,28 @@
           <div class="barChart">
             <canvas id="ageBarChart" width="400" height="200"></canvas>
           </div>
-          <div class="top-country">
+          <div class="barChart">
             <canvas id="myPieChart" width="400" height="400"></canvas>
+          </div>
+        </section>
+        <!-- Table sales detail -->
+        
+        <section class="sales-details centered-section">
+          <h1 class="sales">Sales Details</h1>
+          <div class="sales-table">
+            <table id="user-table">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th>Category</th>
+                  <th>Country</th>
+                  <th>Revenue</th>
+                  <th>Profit</th>
+                  <th>Item sold</th>
+                </tr>
+              </thead>
+              <tbody id="data-output" onload="getData()"></tbody>
+            </table>
           </div>
         </section>
         <!-- <section id="about" class="about-section">
@@ -154,9 +180,12 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
     <script src="index.js"></script>
     <script src="row2.js"></script>
     <script src="row3.js"></script>
     <script src="style.js"></script>
+    <script src="salesDetail.js"></script>
   </body>
 </html>
