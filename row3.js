@@ -1,30 +1,29 @@
-const barGender = document.getElementById("GenderBarchart");
+const TopProduct = document.getElementById("TopProduct");
 const ageBarchart = document.getElementById("ageBarChart");
 
-fetch("./data/genderandage.json")
-  .then((response) => {
+fetch("./data/topProduct.json")
+  .then(function (response) {
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
-    return response.json(); // You need to return the parsed JSON data here
+    return response.json();
   })
-  .then((data) => {
+  .then(function (data) {
     console.log(data);
-  })
-  .catch((error) => {
-    console.error("Error fetching sales data:", error);
+    Top5Product(data,"bar")
   });
 
-function gender() {
-  new Chart(barGender, {
-    type: "bar",
+function Top5Product(data,type) {
+  new Chart(TopProduct, {
+    type: type,
     data: {
-      labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+      labels:data.map(row => row.ProductName),
       datasets: [
         {
-          label: "# of Votes",
-          data: [12, 19, 3, 5, 2, 3],
+          label: "Top 5 product ",
+          data: data.map(row => row.revenue),
           borderWidth: 1,
+          backgroundColor:'rgba(241, 196, 15, 1)',
         },
       ],
     },
@@ -33,11 +32,31 @@ function gender() {
         y: {
           beginAtZero: true,
         },
+        x:{
+          ticks:{
+            font:{
+              size:9,
+            },
+          },
+        },
       },
     },
   });
 }
 function age(data) {
+  fetch("./data/genderandage.json")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json(); // You need to return the parsed JSON data here
+    })
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((error) => {
+      console.error("Error fetching sales data:", error);
+    });
   const ageGroups = ["Adults", "Young Adults", "Youth", "Seniors"];
   const years = ["2015", "2016"];
   const genders = ["Male", "Female"];
@@ -55,7 +74,7 @@ function age(data) {
       backgroundColor:
         gender === "Male" ? "rgba(241, 196, 15, 1)" : "rgba(211, 84, 0, 1)",
       borderColor:
-        gender === "Male" ? "rgba(241, 196, 15, 1)" : "rgba(211, 84, 0, 1)",
+        gender === "Female" ? "rgba(241, 196, 15, 1)" : "rgba(211, 84, 0, 1)",
     };
   });
 
@@ -154,5 +173,5 @@ var chartData = {
   })),
 };
 
-gender();
+Top5Product();
 age();
