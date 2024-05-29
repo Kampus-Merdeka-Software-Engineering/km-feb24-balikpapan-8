@@ -1,15 +1,29 @@
-const barGender = document.getElementById("GenderBarchart");
+const TopProduct = document.getElementById("TopProduct");
 const ageBarchart = document.getElementById("ageBarChart");
-function gender() {
-  new Chart(barGender, {
-    type: "bar",
+
+fetch("./data/topProduct.json")
+  .then(function (response) {
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return response.json();
+  })
+  .then(function (data) {
+    console.log(data);
+    Top5Product(data,"bar")
+  });
+
+function Top5Product(data,type) {
+  new Chart(TopProduct, {
+    type: type,
     data: {
-      labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+      labels:data.map(row => row.ProductName),
       datasets: [
         {
-          label: "# of Votes",
-          data: [12, 19, 3, 5, 2, 3],
+          label: "Top 5 product ",
+          data: data.map(row => row.revenue),
           borderWidth: 1,
+          backgroundColor:'rgba(241, 196, 15, 1)',
         },
       ],
     },
@@ -18,22 +32,58 @@ function gender() {
         y: {
           beginAtZero: true,
         },
+        x:{
+          ticks:{
+            font:{
+              size:9,
+            },
+          },
+        },
       },
     },
   });
 }
-function age() {
+function age(data) {
+  fetch("./data/genderandage.json")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json(); // You need to return the parsed JSON data here
+    })
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((error) => {
+      console.error("Error fetching sales data:", error);
+    });
+  const ageGroups = ["Adults", "Young Adults", "Youth", "Seniors"];
+  const years = ["2015", "2016"];
+  const genders = ["Male", "Female"];
+
+  // Create dataset objects for each gender
+  const datasets = genders.map((gender) => {
+    return {
+      label: gender,
+      data: ageGroups.map((ageGroup) => {
+        return years.reduce((sum, year) => {
+          return sum + (data[year][ageGroup][gender] || 0);
+        }, 0);
+      }),
+      borderWidth: 1,
+      backgroundColor:
+        gender === "Male" ? "rgba(241, 196, 15, 1)" : "rgba(211, 84, 0, 1)",
+      borderColor:
+        gender === "Female" ? "rgba(241, 196, 15, 1)" : "rgba(211, 84, 0, 1)",
+    };
+  });
+
+  // Create the bar chart
   new Chart(ageBarchart, {
     type: "bar",
     data: {
-      labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-      datasets: [
-        {
-          label: "# of Votes",
-          data: [12, 19, 3, 5, 2, 3],
-          borderWidth: 1,
-        },
-      ],
+      labels: ageGroups,
+      datasets: datasets,
     },
     options: {
       scales: {
@@ -47,6 +97,21 @@ function age() {
     },
   });
 }
+
+// Fetch the JSON data and call the age function
+fetch("./data/genderandage.json")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return response.json();
+  })
+  .then((data) => {
+    age(data.salesData);
+  })
+  .catch((error) => {
+    console.error("Error fetching sales data:", error);
+  });
 
 var data = {
   labels: ["Germany", "France", "UK"],
@@ -108,5 +173,5 @@ var chartData = {
   })),
 };
 
-gender();
+Top5Product();
 age();

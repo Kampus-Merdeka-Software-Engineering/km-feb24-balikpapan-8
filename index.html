@@ -24,6 +24,7 @@
             </a>
             <div class="navbar-links" id="navbar-links">
               <ul>
+                <li class="about">About</li>
                 <li>
                   <input
                     type="checkbox"
@@ -38,8 +39,9 @@
           </nav>
         </header>
 
-        <h1 id="yearly" class="range">Sales Performance</h1>
-
+        <div class="sales-performance">
+          <h1 id="yearly" class="range">Sales Performance</h1>
+        </div>
         <section class="container-first-row">
           <div class="score-cards">
             <div class="score-card-revenue">
@@ -126,18 +128,28 @@
         </section>
 
         <section class="container-third-row">
-          <div class="barChart">
+          <div class="genderChart">
             <div>
-              <canvas class="gender" id="GenderBarchart"></canvas>
+              <canvas
+                class="gender"
+                id="TopProduct"
+                width="400"
+                height="200"
+              ></canvas>
             </div>
           </div>
           <div class="barChart">
-            <canvas id="ageBarChart"></canvas>
+            <canvas id="ageBarChart" width="400" height="200"></canvas>
           </div>
           <div class="top-country">
             <canvas id="myPieChart" width="400" height="400"></canvas>
           </div>
         </section>
+        <!-- <section id="about" class="about-section">
+          <div class="team-section">
+            <h2 class="team8">Team 8 Balikpapan</h2>
+          </div>
+        </section> -->
       </div>
     </main>
 
