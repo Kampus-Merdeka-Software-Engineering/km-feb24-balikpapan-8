@@ -19,13 +19,13 @@ function darkmodeToggle() {
   darkmodeCheckbox.addEventListener("change", () => {
     if (darkmodeCheckbox.checked) {
       console.log("Dark mode is on");
-      body.style.background = "linear-gradient(180deg, #000000, #ffff00)";
+      body.style.background = "Black";
       for (let i = 0; i < salesperformance.length; i++) {
         salesperformance[i].style.color = "white";
       }
     } else {
       console.log("Dark mode is off");
-      body.style.background = "linear-gradient(180deg, #01cbfd, #fbff00)";
+      body.style.background = "white";
       for (let i = 0; i < salesperformance.length; i++) {
         salesperformance[i].style.color = "black";
       }
