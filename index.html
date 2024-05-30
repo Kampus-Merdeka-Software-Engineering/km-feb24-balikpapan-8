@@ -84,79 +84,102 @@
         </section>
         <!-- Second Row -->
         <section class="container-second-row">
-          <div class="wrap-line-chart">
-            <div class="table-top-product sales-trend">
-              <div class="filterLine">
-                <div id="filteringByYear" class="floatright">
-                  <label><input type="checkbox" value="2015" /> 2015</label>
-                  <label><input type="checkbox" value="2016" /> 2016</label>
+          <div class="wrap-entire-row">
+            <div class="Second-row-wrap">
+              <h1 class="line-chart-label">Sales Trends</h1>
+              <div class="wrap-line-chart">
+                <div class="table-top-product sales-trend">
+                  <div class="filterLine">
+                    <div id="filteringByYear" class="floatright">
+                      <label><input type="checkbox" value="2015" /> 2015</label>
+                      <label><input type="checkbox" value="2016" /> 2016</label>
+                    </div>
+                    <canvas id="myLineChart" width="80%" height="400"></canvas>
+                  </div>
                 </div>
-                <canvas id="myLineChart" width="80%" height="400"></canvas>
               </div>
             </div>
-          </div>
-          <div class="barchart-category">
-            <div class="table-gender sales-kategori">
-              <center>
-                <div class="filterBar">
-                  <div id="filteringByCategories">
-                    <input
-                      type="checkbox"
-                      id="accessories"
-                      value="Accessories"
-                      name="accessories"
-                    />
-                    <label for="accessories">Accessories</label>
-                    <input
-                      type="checkbox"
-                      id="bikes"
-                      value="Bikes"
-                      name="bikes"
-                    />
-                    <label for="bikes">Bikes</label>
-                    <input
-                      type="checkbox"
-                      id="clothing"
-                      value="Clothing"
-                      name="clothing"
-                    />
-                    <label for="clothing">Clothing</label>
-                  </div>
-                  <div id="filteringByYears">
-                    <label><input type="checkbox" value="2015" /> 2015</label>
-                    <label><input type="checkbox" value="2016" /> 2016</label>
-                  </div>
-                  <canvas id="myBarChart"></canvas>
+
+            <div class="second-row-bar">
+              <h1>Sales By Category</h1>
+              <div class="barchart-category">
+                <div class="table-gender sales-kategori">
+                  <center>
+                    <div class="filterBar">
+                      <div id="filteringByCategories">
+                        <input
+                          type="checkbox"
+                          id="accessories"
+                          value="Accessories"
+                          name="accessories"
+                        />
+                        <label for="accessories">Accessories</label>
+                        <input
+                          type="checkbox"
+                          id="bikes"
+                          value="Bikes"
+                          name="bikes"
+                        />
+                        <label for="bikes">Bikes</label>
+                        <input
+                          type="checkbox"
+                          id="clothing"
+                          value="Clothing"
+                          name="clothing"
+                        />
+                        <label for="clothing">Clothing</label>
+                      </div>
+                      <div id="filteringByYears">
+                        <label
+                          ><input type="checkbox" value="2015" /> 2015</label
+                        >
+                        <label
+                          ><input type="checkbox" value="2016" /> 2016</label
+                        >
+                      </div>
+                      <canvas id="myBarChart"></canvas>
+                    </div>
+                  </center>
                 </div>
-              </center>
+              </div>
             </div>
           </div>
         </section>
         <!-- Third row -->
         <section class="container-third-row">
-          <div class="barChart">
-            <div>
-              <canvas
-                class="gender"
-                id="TopProduct"
-                width="400"
-                height="200"
-              ></canvas>
+          <div class="wrap-third-row"></div>
+          <div class="wrap-topProduct">
+            <h1>Top Product</h1>
+            <div class="barChart">
+              <div>
+                <canvas
+                  class="gender"
+                  id="TopProduct"
+                  width="400"
+                  height="200"
+                ></canvas>
+              </div>
             </div>
           </div>
-          <div class="barChart">
-            <canvas id="ageBarChart" width="400" height="200"></canvas>
+          <div class="wrap-age">
+            <h1>Sales By Gender and Age</h1>
+            <div class="barChart">
+              <canvas id="ageBarChart" width="400" height="200"></canvas>
+            </div>
           </div>
-          <div class="barChart">
-            <canvas id="myPieChart" width="400" height="400"></canvas>
+          <div class="wrap-pie">
+            <h1>Sales by Country</h1>
+            <div class="barChart">
+              <canvas id="myPieChart" width="400" height="400"></canvas>
+            </div>
           </div>
         </section>
         <!-- Table sales detail -->
-        
+
         <section class="sales-details centered-section">
           <h1 class="sales">Sales Details</h1>
           <div class="sales-table">
-            <table id="user-table">
+            <table id="user-table" data-ordering="“true”">
               <thead>
                 <tr>
                   <th>Product</th>
@@ -182,10 +205,10 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
-    <script src="index.js"></script>
-    <script src="row2.js"></script>
-    <script src="row3.js"></script>
-    <script src="style.js"></script>
-    <script src="salesDetail.js"></script>
+    <script src="/script/index.js"></script>
+    <script src="/script/row2.js"></script>
+    <script src="/script/row3.js"></script>
+    <script src="/script/style.js"></script>
+    <script src="script/salesDetail.js"></script>
   </body>
 </html>

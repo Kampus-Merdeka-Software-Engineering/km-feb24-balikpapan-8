@@ -79,7 +79,7 @@ body {
   font-size: 1.5rem;
   color: black;
   font-weight: bold;
-  margin-left: 44px;
+  margin-left: 15px;
 }
 .about {
   font-weight: bold;
@@ -182,7 +182,7 @@ body {
   justify-content: center;
   border-color: #000000;
   align-items: center;
-  margin-left: 60px;
+  margin-left: 30px;
 }
 
 .container {
@@ -231,6 +231,7 @@ label {
   outline: none;
   transition: border-color 0.3s ease-in-out;
   display: flex;
+  padding-right: 10px;
 }
 
 .select-country select:focus,
@@ -258,16 +259,35 @@ label {
 }
 
 .container-second-row {
-  display: flex;
+  display: block;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   border-color: #000000;
   border-radius: 10px;
   border: #000000;
-  padding-right: 40px;
+  padding-right: 90px;
 }
-
+.Second-row-wrap{
+  display: block;
+  flex-direction: row;
+}
+.second-row-bar{
+  display: block;
+  flex-direction: row;
+}
+.wrap-entire-row{
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px ;
+}
+.wrap-third-row{
+  display: flex;
+  flex-direction: row;
+}
+.line-chart-label{
+  padding-left: 10px;
+}
 .filterLine {
   width: 100%;
   height: 370px;
@@ -323,13 +343,13 @@ label {
   align-items: center;
   border-color: #000000;
   padding-right: 20px;
-  margin-left: 50px;
+  margin-left: 30px;
 }
 
 .table-gender {
   width: 500px;
   height: 400px;
-  margin: 50px auto;
+  /* margin: 50px auto; */
   background-color: yellow;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -407,13 +427,14 @@ a {
   border-radius: 10px;
   background-color: yellow;
   font-weight: bold;
+  
 }
 
 .range {
   display: flex;
   flex-direction: column;
   color: black; /* Change this to a contrasting color */
-  margin-left: 60px;
+  margin-left: 30px;
   margin-top: 60px; /* Ensure it's not overlapped by the navbar */
 }
 .sales-performance {
@@ -471,7 +492,7 @@ a {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: white;
+  /* background-color: white; */
 }
 .sales{
   display: flex;
@@ -578,6 +599,7 @@ a {
     flex-direction: column;
     padding-right: 60px;
     display: flex;
+    
   }
   .score-cards {
     flex-direction: column;

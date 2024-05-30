@@ -9,6 +9,12 @@ function darkmodeToggle() {
   let darkmodeCheckbox = document.getElementById("darkmode-toggle");
   let salesperformance = document.getElementsByClassName("range");
   let body = document.body;
+  let h1Elements = document.getElementsByTagName("h1");
+
+  for (let k = 0; k < h1Elements.length; k++) {
+      h1Elements[k].style.color = "black";
+      h1Elements[k].style.transition = "color 0.5s";
+  }
 
   for (let i = 0; i < salesperformance.length; i++) {
     salesperformance[i].style.color = "black";
@@ -19,15 +25,21 @@ function darkmodeToggle() {
   darkmodeCheckbox.addEventListener("change", () => {
     if (darkmodeCheckbox.checked) {
       console.log("Dark mode is on");
-      body.style.background = "Black";
+      body.style.backgroundColor = "black";
       for (let i = 0; i < salesperformance.length; i++) {
         salesperformance[i].style.color = "white";
       }
+      for (let k = 0; k < h1Elements.length; k++) {
+        h1Elements[k].style.color = "white";
+      }
     } else {
       console.log("Dark mode is off");
-      body.style.background = "white";
+      body.style.backgroundColor = "white";
       for (let i = 0; i < salesperformance.length; i++) {
         salesperformance[i].style.color = "black";
+      }
+      for (let k = 0; k < h1Elements.length; k++) {
+        h1Elements[k].style.color = "black";
       }
     }
   });

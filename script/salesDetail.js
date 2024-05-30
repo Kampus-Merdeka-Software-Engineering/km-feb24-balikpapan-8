@@ -29,15 +29,25 @@ async function getData() {
         productSums = Object.values(productSumsMap);
         populateTable(productSums);
 
-        $('#user-table').DataTable({
+       new DataTable('#user-table',{
             data: productSums,
+            "ordering": true,
+            aaSorting: [[0, 'desc']],
             columns: [
                 { data: "Product" },
                 { data: "Sub_Category" },
                 { data: "Country" },
-                { data: "Revenue" },
+                { data: "Revenue",
+                    render:(data)=>{
+                        const number = DataTable.render
+                            .number(",")
+                            .display(data)
+                        return number;
+                    }
+                 },
                 { data: "Profit" },
-                { data: "Order_Quantity" }
+                { data: "Order_Quantity" },
+                
             ]
         });
     } catch (error) {
