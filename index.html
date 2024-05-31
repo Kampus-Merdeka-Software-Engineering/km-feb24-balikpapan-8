@@ -88,13 +88,13 @@
             <div class="Second-row-wrap">
               <h1 class="line-chart-label">Sales Trends</h1>
               <div class="wrap-line-chart">
-                <div class="table-top-product sales-trend">
-                  <div class="filterLine">
-                    <div id="filteringByYear" class="floatright">
-                      <label><input type="checkbox" value="2015" /> 2015</label>
-                      <label><input type="checkbox" value="2016" /> 2016</label>
-                    </div>
-                    <canvas id="myLineChart" width="80%" height="400"></canvas>
+                <div class="filterLine">
+                  <div id="filteringByYear" class="floatright">
+                    <label><input type="checkbox" value="2015" /> 2015</label>
+                    <label><input type="checkbox" value="2016" /> 2016</label>
+                  </div>
+                  <div class="sizing-line">
+                    <canvas id="myLineChart"></canvas>
                   </div>
                 </div>
               </div>
@@ -102,9 +102,9 @@
 
             <div class="second-row-bar">
               <h1>Sales By Category</h1>
-              <div class="barchart-category">
-                <div class="table-gender sales-kategori">
-                  <center>
+              <div class="wrap-category">
+                <div class="barchart-category">
+                  <div class="table-gender sales-kategori">
                     <div class="filterBar">
                       <div id="filteringByCategories">
                         <input
@@ -137,9 +137,12 @@
                           ><input type="checkbox" value="2016" /> 2016</label
                         >
                       </div>
-                      <canvas id="myBarChart"></canvas>
+                     
                     </div>
-                  </center>
+                     <div class="sizing-bar">
+                        <canvas id="myBarChart"></canvas>
+                      </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -155,7 +158,7 @@
                 <canvas
                   class="gender"
                   id="TopProduct"
-                  width="400"
+                  width="320"
                   height="200"
                 ></canvas>
               </div>
@@ -163,20 +166,20 @@
           </div>
           <div class="wrap-age">
             <h1>Sales By Gender and Age</h1>
-            <div class="barChart">
-              <canvas id="ageBarChart" width="400" height="200"></canvas>
+            <div class="barchart-gender">
+              <canvas id="ageBarChart" width="300" height="200"></canvas>
             </div>
           </div>
           <div class="wrap-pie">
             <h1>Sales by Country</h1>
-            <div class="barChart">
-              <canvas id="myPieChart" width="400" height="400"></canvas>
+            <div class="pieChart-country">
+              <canvas id="myPieChart" width="300" height="200"></canvas>
             </div>
           </div>
         </section>
         <!-- Table sales detail -->
 
-        <section class="sales-details centered-section">
+        <section class="sales-detaild-section">
           <h1 class="sales">Sales Details</h1>
           <div class="sales-table">
             <table id="user-table" data-ordering="“true”">
