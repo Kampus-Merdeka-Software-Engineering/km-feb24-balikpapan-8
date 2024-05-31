@@ -2,6 +2,7 @@
 const lineCommonOptions = {
   responsive: true,
   maintainAspectRatio: false,
+  aspectRatio:3,
   scales: {
     x: {
       title: {
@@ -19,6 +20,7 @@ const lineCommonOptions = {
     },
   },
 };
+Chart.defaults.color = '#FFFF';
 
 // Common Bar chart options
 const barCommonOptions = {
@@ -261,10 +263,14 @@ function displayCharts(filteringProduct, filteringYears, filteringLineYears) {
               borderWidth: 2, // Increase line thickness
               tension: 1, // Add smoothness to the line
               spanGaps: false, // Ensure no gaps in data
+              fontColor:"rgb(255, 255, 255)"
             },
           ],
         },
-        options: lineCommonOptions,
+        options:{
+          maintainAspectRatio:false,
+          aspectRatio:2,
+        },
       });
     });
 }

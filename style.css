@@ -3,7 +3,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: white;
+  background: linear-gradient(135deg, #57cff3, #8a7fc5);
   align-items: center;
   justify-content: center;
 }
@@ -13,7 +13,7 @@ body {
   height: 20px;
   position: relative;
   display: block;
-  background-color: #ebebeb;
+  background-color: grey;
   border-radius: 200px;
   box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),
     inset 0px -5px 15px rgba(255, 255, 255, 0.4);
@@ -62,7 +62,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: yellow;
+  background-color: rgb(35, 2, 88);
   padding: 1rem;
   position: fixed;
   top: 0;
@@ -72,12 +72,13 @@ body {
   box-sizing: border-box;
   width: 100%;
   margin-bottom: 10px;
+  color: white;
   /* z-index: 1000; */
 }
 
 .brand-title {
   font-size: 1.5rem;
-  color: black;
+  color: white;
   font-weight: bold;
   margin-left: 15px;
 }
@@ -192,26 +193,36 @@ body {
 
 .score-cards,
 .selectors {
-  gap: 20px;
+  gap: 10px;
   display: flex;
+  flex-direction: row;
   text-align: center;
 }
 
-.score-card-revenue,
-.score-card-profit {
-  background-color: yellow;
+.score-card-revenue{
+  background:linear-gradient(100deg,#666cff,rgb(149, 1, 248));
   padding: 50px;
   border-radius: 5px;
   height: 100px;
   width: 150px;
+  color: white;
+}
+.score-card-profit {
+  background:linear-gradient(100deg,rgb(2, 247, 255),rgb(6, 148, 243));
+  padding: 50px;
+  border-radius: 5px;
+  height: 100px;
+  width: 150px;
+  color: white;
 }
 
 .score-card-item {
-  background-color: yellow;
+  background: linear-gradient(100deg,rgb(250, 148, 250),rgb(228, 5, 228));
   padding: 50px;
   border-radius: 5px;
   height: 100px;
   width: 150px;
+  color: white;
 }
 
 label {
@@ -248,8 +259,9 @@ label {
 .selectors {
   display: inline-flex;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: auto;
   width: 350px;
+  margin-bottom: 154px;
 }
 
 .select-country,
@@ -268,18 +280,52 @@ label {
   border: #000000;
   padding-right: 90px;
 }
+.sizing-line{
+  display: grid; 
+  width: 650px;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+}
+.sizing-bar{
+  display: flex; 
+  width: 400px;
+  height: 190px;
+  align-items: center;
+  justify-content: center;
+}
+.wrap-line-chart{
+  display: flex;
+  width: 650px;
+  height: 250px;
+  margin-left: 10px;
+  border-radius: 10px;
+  background: linear-gradient(100deg,#2109fa,rgb(1, 170, 248));
+}
+
+.wrap-category{
+  display: flex;
+  width: 500px;
+  height: 250px;
+  /* border: 2px solid black; */
+  border-radius: 10px;
+
+}
 .Second-row-wrap{
   display: block;
   flex-direction: row;
+  
 }
 .second-row-bar{
   display: block;
   flex-direction: row;
+  width: 400px;
 }
 .wrap-entire-row{
   display: flex;
   flex-direction: row;
   margin-left: 20px ;
+  gap: 10px;
 }
 .wrap-third-row{
   display: flex;
@@ -298,11 +344,11 @@ label {
   width: 10%;
 }
 
-.filterBar {
+/* .filterBar {
   width: 100%;
   height: 370px;
   font-size: 14px;
-}
+} */
 
 .filterBar input {
   width: 20px;
@@ -312,45 +358,46 @@ label {
   float: left;
   margin-left: 20px;
   margin-bottom: 10px;
+  color:white;
 }
 
 #filteringByYears {
   float: right;
   margin-right: 20px;
   margin-bottom: 10px;
+  color: white;
 }
 
 #filteringByYear {
   float: left;
   margin-left: 20px;
   margin-bottom: 10px;
+  color: white;
 }
 
-.sales-trend {
-  width: 53%;
-  height: 400px;
-}
 
-.sales-kategori {
+/* .sales-kategori {
   width: 35%;
   height: 400px;
-}
+} */
 
 .container-third-row {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   border-color: #000000;
-  padding-right: 20px;
-  margin-left: 30px;
+  gap:10px;
+  margin-right: 150px;
+  /* padding-right: 20px; */
+  /* margin-left: 30px; */
 }
 
 .table-gender {
   width: 500px;
-  height: 400px;
+  height: 230px;
   /* margin: 50px auto; */
-  background-color: yellow;
+  background: linear-gradient(100deg,#09fa96,rgb(1, 170, 248));
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   justify-content: space-evenly;
@@ -362,7 +409,7 @@ label {
 .table-top-product {
   background-color: yellow;
   width: 700px;
-  height: 400px;
+  height: 350px;
   margin: 10px;
   justify-content: space-evenly;
   align-items: center;
@@ -421,12 +468,23 @@ a {
   color: #000000;
 }
 
-#country,
+
 #year {
   border: none;
   border-radius: 10px;
-  background-color: yellow;
+  background:rgba(26, 22, 22, 0.795);
   font-weight: bold;
+  color: white;
+  border: 2px solid grey;
+
+}
+#country{
+  border: none;
+  border-radius: 10px;
+  background:rgba(26, 22, 22, 0.795);
+  font-weight: bold;
+  color: white;
+  border: 2px solid grey;
   
 }
 
@@ -465,20 +523,43 @@ a {
 }
 
 .barChart {
-  display: flex;
-  width: 400px;
+  display: grid;
+  width: 320;
   height: 200px;
   padding: 30px;
   margin:2px;
   border-radius: 10px;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #ffff00;
+  background:linear-gradient(100deg,#065f3a,rgb(1, 170, 248));
   box-shadow: #242424;
+}
+.barchart-gender{
+  display: flex;
+  width: 320px;
+  height: 200px;
+  padding: 30px;
+  margin:2px;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+  background:linear-gradient(100deg,#b10345,rgb(1, 170, 248));
+  box-shadow: #242424;
+}
+.pieChart-country{
+  display: flex;
+  width: 320px;
+  height: 200px;
+  padding: 30px;
+  margin:2px;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+  background:linear-gradient(100deg,#a5b108,rgb(1, 170, 248));
 }
 .genderChart {
   display: flex;
-  width: 400px;
+  width: 320px;
   height: 200px;
   padding: 30px;
   border-radius: 10px;
