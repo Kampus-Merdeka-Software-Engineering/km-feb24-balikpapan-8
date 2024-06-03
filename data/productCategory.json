@@ -70,6 +70,15 @@
             "label": "Revenue",
             "year": "2016",
             "revenue": 6621033.0
+        }, {
+            "label": "Profit",
+            "year": "2015",
+            "profit": 2374621.0
+        },
+        {
+            "label": "Profit",
+            "year": "2016",
+            "profit": 2598258.0
         }
     ],
     "yearlyProfit": [{
