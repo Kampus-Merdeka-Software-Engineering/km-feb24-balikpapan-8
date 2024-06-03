@@ -1,0 +1,46 @@
+/* General styles for the circle and layout */
+.body{
+    margin:0;
+    padding:0;
+}
+.circle {
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    border-radius: 50%; /* Fix border radius to make it a perfect circle */
+    margin-bottom: 10px; /* Add some spacing between the circle and text */
+}
+
+.wrap-about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center text inside each wrap-circle */
+    gap: 20px; /* Add some spacing between each wrap-circle */
+    padding: 20px; /* Add some padding for better spacing */
+    /* margin-top: 100px; */
+}
+
+.wrap-circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items inside the wrap-circle */
+    max-width: 200px; /* Limit the width of each wrap-circle */
+}
+.wrap-entire-about{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:100px;
+}
+/* Responsive styles for screens below 600px */
+@media (max-width: 600px) {
+    .wrap-about {
+        flex-direction: column;
+        gap: 40px; /* Increase the spacing between wrap-circle sections */
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+}

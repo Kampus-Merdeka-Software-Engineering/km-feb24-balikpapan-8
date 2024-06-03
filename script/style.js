@@ -32,7 +32,6 @@ function darkmodeToggle() {
       for (let k = 0; k < h1Elements.length; k++) {
         h1Elements[k].style.color = "white";
       }
-      
     } else {
       console.log("Dark mode is off");
       body.style.background = "linear-gradient(135deg, #57cff3, #8a7fc5)";
@@ -47,3 +46,10 @@ function darkmodeToggle() {
 }
 
 darkmodeToggle();
+// Function to set the default body color
+function setDefaultBodyColor() {
+  document.body.style.backgroundColor = "#ADD8E6"; // Light blue color
+}
+
+// Set the body color when the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", setDefaultBodyColor);

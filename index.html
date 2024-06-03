@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard Sales - Section Balikpapan Team 8</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- <link
+    <link
       rel="stylesheet"
       href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"
-    /> -->
+    />
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+   
   </head>
 
   <body>
@@ -17,7 +20,7 @@
       <div class="main-container">
         <header>
           <nav class="navbar">
-            <div class="brand-title">Dashboard</div>
+            <div ><a href="index.html" class="brand-title">Dashboard</a></div>
             <a
               href="javascript:void(0);"
               class="toggle-button"
@@ -29,7 +32,7 @@
             </a>
             <div class="navbar-links" id="navbar-links">
               <ul>
-                <li class="about">About</li>
+                <li ><a href="about.html" class="about">About</a></li>
                 <li>
                   <input
                     type="checkbox"
@@ -137,11 +140,10 @@
                           ><input type="checkbox" value="2016" /> 2016</label
                         >
                       </div>
-                     
                     </div>
-                     <div class="sizing-bar">
-                        <canvas id="myBarChart"></canvas>
-                      </div>
+                    <div class="sizing-bar">
+                      <canvas id="myBarChart"></canvas>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -179,23 +181,24 @@
         </section>
         <!-- Table sales detail -->
 
-        <section class="sales-detaild-section">
-          <h1 class="sales">Sales Details</h1>
-          <div class="sales-table">
-            <table id="user-table" data-ordering="“true”">
+        <section class="sales-details-section">
+          <div class="wrap-entire-table">
+            <h1 class="table-title">Sales Detail</h1>
+            <table id ="myTable"class="table-bordered">
               <thead>
-                <tr>
-                  <th>Product</th>
-                  <th>Category</th>
-                  <th>Country</th>
-                  <th>Revenue</th>
-                  <th>Profit</th>
-                  <th>Item sold</th>
-                </tr>
+                <th>Product</th>
+                <th>Category</th>
+                <th>Country</th>
+                <th>Revenue</th>
+                <th>Profit</th>
+                <th>Item sold</th>
               </thead>
-              <tbody id="data-output" onload="getData()"></tbody>
+              <tbody id="data-output">
+  
+              </tbody>
             </table>
           </div>
+         
         </section>
         <!-- <section id="about" class="about-section">
           <div class="team-section">
@@ -208,9 +211,12 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
     <script src="/script/index.js"></script>
     <script src="/script/row2.js"></script>
     <script src="/script/row3.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@7/swiper-bundle.min.js"></script>
     <script src="/script/style.js"></script>
     <script src="script/salesDetail.js"></script>
   </body>
