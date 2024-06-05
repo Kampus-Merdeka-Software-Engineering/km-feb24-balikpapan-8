@@ -34,7 +34,7 @@ function darkmodeToggle() {
       }
     } else {
       console.log("Dark mode is off");
-      body.style.background = "linear-gradient(135deg, #57cff3, #8a7fc5)";
+      body.style.background = "white";
       for (let i = 0; i < salesperformance.length; i++) {
         salesperformance[i].style.color = "black";
       }
@@ -47,9 +47,8 @@ function darkmodeToggle() {
 
 darkmodeToggle();
 // Function to set the default body color
-function setDefaultBodyColor() {
-  document.body.style.backgroundColor = "#ADD8E6"; // Light blue color
-}
+document.addEventListener("DOMContentLoaded", function() {
+  // document.body.style.background = "linear-gradient(135deg, #f1f512, #b9750e)";
+  document.body.style.background = "white";
+});
 
-// Set the body color when the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", setDefaultBodyColor);

@@ -1,11 +1,13 @@
 html,
 body {
+  display: flex;
+  flex-direction: column;
   padding: 0;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  /* background: linear-gradient(135deg, #57cff3, #8a7fc5); */
-  align-items: center;
-  justify-content: center;
+  /* background: linear-gradient(135deg, #f1f512, #b9750e); */
+  /* align-items: center;
+  justify-content: center; */
 }
 
 .darkmode {
@@ -80,7 +82,7 @@ body {
   font-size: 1.5rem;
   color: white;
   font-weight: bold;
-  margin-left: 15px;
+  /* margin-left: 20px; */
 }
 .about {
   font-weight: bold;
@@ -97,9 +99,8 @@ body {
   margin: 0 1rem;
 }
 
-.navbar-links ul li a {
+.navbar-links ul li {
   text-decoration: none;
-  color: white;
   font-size: 1.2rem;
   color: #000000;
   font-weight: bold;
@@ -177,13 +178,14 @@ body {
   display: block;
 }
 
-.container-first-row,.container-third-row {
+.container-first-row{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  /* justify-content: center; */
   border-color: #000000;
   align-items: center;
-  margin-left: 30px;
+  justify-content: center;
+  margin-left: 60px;
 }
 
 .container {
@@ -199,8 +201,8 @@ body {
   text-align: center;
 }
 
-.score-card-revenue{
-  background:linear-gradient(100deg,#666cff,rgb(149, 1, 248));
+.score-card-revenue {
+  background: linear-gradient(100deg, #666cff, rgb(149, 1, 248));
   padding: 50px;
   border-radius: 5px;
   height: 100px;
@@ -208,7 +210,7 @@ body {
   color: white;
 }
 .score-card-profit {
-  background:linear-gradient(100deg,rgb(2, 247, 255),rgb(6, 148, 243));
+  background: linear-gradient(100deg, rgb(2, 247, 255), rgb(6, 148, 243));
   padding: 50px;
   border-radius: 5px;
   height: 100px;
@@ -217,7 +219,7 @@ body {
 }
 
 .score-card-item {
-  background: linear-gradient(100deg,rgb(250, 148, 250),rgb(228, 5, 228));
+  background: linear-gradient(100deg, rgb(250, 148, 250), rgb(228, 5, 228));
   padding: 50px;
   border-radius: 5px;
   height: 100px;
@@ -233,7 +235,7 @@ label {
 
 .select-country select,
 .select-year select {
-  width: 150px;
+  /* width: 150px; */
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -242,7 +244,7 @@ label {
   outline: none;
   transition: border-color 0.3s ease-in-out;
   display: flex;
-  padding-right: 10px;
+  /* padding-right: 10px; */
 }
 
 .select-country select:focus,
@@ -260,78 +262,72 @@ label {
   display: inline-flex;
   justify-content: space-between;
   margin: auto;
-  width: 350px;
+  /* width: 350px; */
   margin-bottom: 154px;
+  margin-left: 100px;
 }
 
-.select-country,
-.select-year {
-  flex-basis: 78%;
-  display: inline-block;
-}
 
 .container-second-row {
-  display: block;
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   border-color: #000000;
   border-radius: 10px;
   border: #000000;
-  padding-right: 90px;
+  margin-right: 200px;
 }
-.sizing-line{
-  display: grid; 
+.sizing-line {
+  display: grid;
   width: 650px;
   height: 200px;
   align-items: center;
   justify-content: center;
 }
-.sizing-bar{
-  display: flex; 
+.sizing-bar {
+  display: flex;
   width: 400px;
   height: 190px;
   align-items: center;
   justify-content: center;
 }
-.wrap-line-chart{
+.wrap-line-chart {
   display: flex;
   width: 650px;
   height: 250px;
   margin-left: 10px;
   border-radius: 10px;
-  background: linear-gradient(100deg,#2109fa,rgb(1, 170, 248));
+  background: linear-gradient(100deg, #2109fa, rgb(1, 170, 248));
 }
 
-.wrap-category{
+.wrap-category {
   display: flex;
   width: 500px;
   height: 250px;
   /* border: 2px solid black; */
   border-radius: 10px;
-
 }
-.Second-row-wrap{
+.Second-row-wrap {
   display: block;
   flex-direction: row;
-  
 }
-.second-row-bar{
+.second-row-bar {
   display: block;
   flex-direction: row;
   width: 400px;
 }
-.wrap-entire-row{
+.wrap-entire-row {
   display: flex;
   flex-direction: row;
-  margin-left: 20px ;
+  margin-left: 20px;
   gap: 10px;
 }
-.wrap-third-row{
+.wrap-third-row {
   display: flex;
   flex-direction: row;
 }
-.line-chart-label{
+.line-chart-label {
   padding-left: 10px;
 }
 .filterLine {
@@ -358,7 +354,7 @@ label {
   float: left;
   margin-left: 20px;
   margin-bottom: 10px;
-  color:white;
+  color: white;
 }
 
 #filteringByYears {
@@ -375,7 +371,6 @@ label {
   color: white;
 }
 
-
 /* .sales-kategori {
   width: 35%;
   height: 400px;
@@ -384,11 +379,11 @@ label {
 .container-third-row {
   display: flex;
   flex-direction: row;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   border-color: #000000;
-  gap:5px;
-  margin-right: 165px;
+  gap: 5px;
+  margin-right:75px;
   /* padding-right: 20px; */
   /* margin-left: 30px; */
 }
@@ -397,7 +392,7 @@ label {
   width: 500px;
   height: 230px;
   /* margin: 50px auto; */
-  background: linear-gradient(100deg,#09fa96,rgb(1, 170, 248));
+  background: linear-gradient(100deg, #09fa96, rgb(1, 170, 248));
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   justify-content: space-evenly;
@@ -468,31 +463,28 @@ a {
   color: #000000;
 }
 
-
 #year {
   border: none;
   border-radius: 10px;
-  background:rgba(26, 22, 22, 0.795);
+  background: rgba(26, 22, 22, 0.795);
   font-weight: bold;
   color: white;
   border: 2px solid grey;
-
 }
-#country{
+#country {
   border: none;
   border-radius: 10px;
-  background:rgba(26, 22, 22, 0.795);
+  background: rgba(26, 22, 22, 0.795);
   font-weight: bold;
   color: white;
   border: 2px solid grey;
-  
 }
 
 .range {
   display: flex;
   flex-direction: column;
   color: black; /* Change this to a contrasting color */
-  margin-left: 30px;
+  margin-left: 60px;
   margin-top: 60px; /* Ensure it's not overlapped by the navbar */
 }
 .sales-performance {
@@ -501,16 +493,8 @@ a {
   border: 2px solid black;
   border: none;
 }
-.about-section {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid black;
-  background-image: url(asset/sales.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.about {
+  color: white;
 }
 .team-section {
   color: white;
@@ -527,35 +511,35 @@ a {
   width: 320;
   height: 200px;
   padding: 30px;
-  margin:2px;
+  margin: 2px;
   border-radius: 10px;
   justify-content: space-evenly;
   align-items: center;
-  background:linear-gradient(100deg,#065f3a,rgb(1, 170, 248));
+  background: linear-gradient(100deg, #065f3a, rgb(1, 170, 248));
   box-shadow: #242424;
 }
-.barchart-gender{
+.barchart-gender {
   display: flex;
   width: 320px;
   height: 200px;
   padding: 30px;
-  margin:2px;
+  margin: 2px;
   border-radius: 10px;
   justify-content: space-evenly;
   align-items: center;
-  background:linear-gradient(100deg,#b10345,rgb(1, 170, 248));
+  background: linear-gradient(100deg, #b10345, rgb(1, 170, 248));
   box-shadow: #242424;
 }
-.pieChart-country{
+.pieChart-country {
   display: flex;
   width: 320px;
   height: 200px;
   padding: 30px;
-  margin:2px;
+  margin: 2px;
   border-radius: 10px;
   justify-content: space-evenly;
   align-items: center;
-  background:linear-gradient(100deg,#a5b108,rgb(1, 170, 248));
+  background: linear-gradient(100deg, #a5b108, rgb(1, 170, 248));
 }
 .genderChart {
   display: flex;
@@ -567,12 +551,12 @@ a {
   align-items: center;
   background-color: yellow;
 }
-.wrap-entire-table{
+.wrap-entire-table {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 }
-.table-title{
+.table-title {
   margin-top: 50px;
   justify-content: center;
   align-items: center;
@@ -637,10 +621,9 @@ a {
     flex-direction: column;
     padding-right: 40px;
     display: flex;
-    
   }
-  
-  .range{
+
+  .range {
     text-align: center;
     margin-right: 230px;
   }
