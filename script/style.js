@@ -32,10 +32,9 @@ function darkmodeToggle() {
       for (let k = 0; k < h1Elements.length; k++) {
         h1Elements[k].style.color = "white";
       }
-      
     } else {
       console.log("Dark mode is off");
-      body.style.background = "linear-gradient(135deg, #57cff3, #8a7fc5)";
+      body.style.background = "white";
       for (let i = 0; i < salesperformance.length; i++) {
         salesperformance[i].style.color = "black";
       }
@@ -47,3 +46,9 @@ function darkmodeToggle() {
 }
 
 darkmodeToggle();
+// Function to set the default body color
+document.addEventListener("DOMContentLoaded", function() {
+  // document.body.style.background = "linear-gradient(135deg, #f1f512, #b9750e)";
+  document.body.style.background = "white";
+});
+
