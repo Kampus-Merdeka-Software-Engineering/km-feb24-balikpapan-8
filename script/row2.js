@@ -14,6 +14,7 @@ const lineCommonOptions = {
             beginAtZero: false, // Ensure the y-axis does not begin at zero
             min: "Values", // Start the y-axis at 4000
             title: {
+                s
                 display: true,
                 text: "Values",
             },
