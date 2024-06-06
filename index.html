@@ -1,112 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard Sales - Section Balikpapan Team 8</title>
     <link rel="stylesheet" href="/style/style.css" />
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css" />
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css"
+    />
+  </head>
 
-<body>
+  <body>
     <main>
-        <!-- Navbar -->
-        <div class="main-container">
-            <header>
-                <nav class="navbar">
-                    <div><a href="index.html" class="brand-title">Dashboard</a></div>
-                    <a href="javascript:void(0);" class="toggle-button" id="toggle-button">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </a>
-                    <div class="navbar-links" id="navbar-links">
-                        <ul>
-                            <li><a href="about.html" class="about">About</a></li>
-                            <li>
-                                <input type="checkbox" class="darkmodeInput" id="darkmode-toggle" value="darkmode" />
-                                <label class="darkmode" for="darkmode-toggle"></label>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </header>
-
-            <div class="sales-performance">
-                <h1 id="yearly" class="range">Sales Performance</h1>
+      <!-- Navbar -->
+      <div class="main-container">
+        <header>
+          <nav class="navbar">
+            <div><a href="index.html" class="brand-title">Dashboard</a></div>
+            <a
+              href="javascript:void(0);"
+              class="toggle-button"
+              id="toggle-button"
+            >
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </a>
+            <div class="navbar-links" id="navbar-links">
+              <ul>
+                <li><a href="about.html" class="about">About</a></li>
+                <li>
+                  <input
+                    type="checkbox"
+                    class="darkmodeInput"
+                    id="darkmode-toggle"
+                    value="darkmode"
+                  />
+                  <label class="darkmode" for="darkmode-toggle"></label>
+                </li>
+              </ul>
             </div>
-            <!-- First row -->
-            <section class="container-first-row">
-                <div class="score-cards">
-                    <div class="score-card-revenue">
-                        <h3>Revenue</h3>
-                        <p class="cardValue" id="Revenue"></p>
-                    </div>
-                    <div class="score-card-profit">
-                        <h3>Profit</h3>
-                        <p class="cardValue" id="profit"></p>
-                    </div>
-                    <div class="score-card-item">
-                        <h3>Items Sold</h3>
-                        <p class="cardValue" id="Item-sold"></p>
-                    </div>
-                </div>
+          </nav>
+        </header>
 
-                <div class="selectors">
-                    <div class="select-country">
-                        <select id="country">
+        <div class="sales-performance">
+          <h1 id="yearly" class="range">Sales Performance</h1>
+        </div>
+        <!-- First row -->
+        <section class="container-first-row">
+          <div class="score-cards">
+            <div class="score-card-revenue">
+              <h3>Revenue</h3>
+              <p class="cardValue" id="Revenue"></p>
+            </div>
+            <div class="score-card-profit">
+              <h3>Profit</h3>
+              <p class="cardValue" id="profit"></p>
+            </div>
+            <div class="score-card-item">
+              <h3>Items Sold</h3>
+              <p class="cardValue" id="Item-sold"></p>
+            </div>
+          </div>
+
+          <div class="selectors">
+            <div class="select-country">
+              <select id="country">
                 <option value="">Select a country</option>
                 <option value="United Kingdom">United Kingdom</option>
                 <option value="France">France</option>
                 <option value="Germany">Germany</option>
               </select>
-                    </div>
-                    <div class="select-year">
-                        <select id="year">
+            </div>
+            <div class="select-year">
+              <select id="year">
                 <option value="">Select a year</option>
                 <option value="2015">2015</option>
                 <option value="2016">2016</option>
               </select>
+            </div>
+          </div>
+        </section>
+        <!-- Second Row -->
+        <section class="container-second-row">
+          <div class="wrap-entire-row">
+            <div class="Second-row-wrap">
+              <h1 class="line-chart-label">Sales Trends</h1>
+              <div class="wrap-line-chart">
+                <div class="filterLine">
+                  <div id="filteringByYear" class="floatright">
+                    <div class="filter-position">
+                      <label
+                        ><input type="checkbox" class="filter" value="2015" />
+                        <div class="year-style">2015</div>
+                        </label
+                      >
+                      <label
+                        ><input type="checkbox" class="filter" value="2016" />
+                        <div class="year-style">2016</div>
+                        </label
+                      >
                     </div>
+                  </div>
+                  <div class="sizing-line">
+                    <canvas id="myLineChart"></canvas>
+                  </div>
                 </div>
-            </section>
-            <!-- Second Row -->
-            <section class="container-second-row">
-                <div class="wrap-entire-row">
-                    <div class="Second-row-wrap">
-                        <h1 class="line-chart-label">Sales Trends</h1>
-                        <div class="wrap-line-chart">
-                            <div class="filterLine">
-                                <div id="filteringByYear" class="floatright">
-                                    <label><input type="checkbox" value="2015" /> 2015</label>
-                                    <label><input type="checkbox" value="2016" /> 2016</label>
-                                </div>
-                                <div class="sizing-line">
-                                    <canvas id="myLineChart"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+            </div>
 
-                    <div class="second-row-bar">
-                        <h1>Sales By Category</h1>
-                        <div class="wrap-category">
-                            <div class="barchart-category">
-                                <div class="table-gender sales-kategori">
-                                    <div class="filterBar">
-                                        <div id="filteringByCategories">
-                                            <input type="checkbox" id="accessories" value="Accessories" name="accessories" />
-                                            <label for="accessories">Accessories</label>
-                                            <input type="checkbox" id="bikes" value="Bikes" name="bikes" />
-                                            <label for="bikes">Bikes</label>
-                                            <input type="checkbox" id="clothing" value="Clothing" name="clothing" />
-                                            <label for="clothing">Clothing</label>
-                                        </div>
-                                        <div id="filteringByYears">
-                                            <label><input type="checkbox" value="2015" /> 2015</label
+            <div class="second-row-bar">
+              <div class="text-positioning">
+                <h1>Sales By Category</h1>
+              </div>
+
+              <div class="wrap-category">
+                <div class="barchart-category">
+                  <div class="table-gender sales-kategori">
+                    <div class="filterBar">
+                      <div id="filteringByCategories">
+                        <input
+                          type="checkbox"
+                          id="accessories"
+                          value="Accessories"
+                          name="accessories"
+                        />
+                        <label for="accessories">Accessories</label>
+                        <input
+                          type="checkbox"
+                          id="bikes"
+                          value="Bikes"
+                          name="bikes"
+                        />
+                        <label for="bikes">Bikes</label>
+                        <input
+                          type="checkbox"
+                          id="clothing"
+                          value="Clothing"
+                          name="clothing"
+                        />
+                        <label for="clothing">Clothing</label>
+                      </div>
+                      <div id="filteringByYears">
+                        <label
+                          ><input type="checkbox" value="2015" /> 2015</label
                         >
                         <label
                           ><input type="checkbox" value="2016" /> 2016</label
@@ -152,11 +199,16 @@
           </div>
         </section>
         <!-- Table sales detail -->
-
+        <section class="table-header">
+          <h1 class="table-title">Sales Detail</h1>
+        </section>
         <section class="sales-details-section">
           <div class="wrap-entire-table">
-            <h1 class="table-title">Sales Detail</h1>
-            <table id="myTable" class="table-bordered">
+            <table
+              id="myTable"
+              class="table-bordered"
+              style="border-radius: 10px"
+            >
               <thead>
                 <th>Product</th>
                 <th>Category</th>
