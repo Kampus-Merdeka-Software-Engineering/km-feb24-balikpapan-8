@@ -138,7 +138,7 @@ let myBarChart;
 let myLineChart;
 
 function displayCharts(filteringProduct, filteringYears, filteringLineYears) {
-    console.log("Re-rendering charts");
+   
     fetch("./data/productCategory.json")
         .then((res) => res.json())
         .then((data) => {

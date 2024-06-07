@@ -11,7 +11,7 @@ function fetchDataAndCalculateTotals() {
       return response.json();
     })
     .then((data) => {
-      console.log(data); // Log the data to check its structure
+      // Log the data to check its structure
 
       if (!data.productCategory || !data.yearlyProfit || !data.yearlyItemSold) {
         throw new Error("Required properties are missing in the JSON data");
@@ -34,9 +34,7 @@ function fetchDataAndCalculateTotals() {
       prof.textContent = `$${totalProfit}`;
       Isold.textContent = `${totalItemSold}`;
 
-      console.log("Total Revenue:", totalRevenue);
-      console.log("Total Profit:", totalProfit);
-      console.log("Total Items Sold:", totalItemSold);
+      
     })
     .catch((error) => {
       console.error("There was a problem with the fetch operation:", error);
