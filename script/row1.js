@@ -54,7 +54,7 @@ function country() {
     let totalIsold;
     let selectedCountry = countrySelect.value;
     let selectedYear = yearSelect.value;
-    console.log(`You selected ${selectedCountry} in ${selectedYear}`);
+    
     if (!selectedCountry && !selectedYear) {
       fetchDataAndCalculateTotals();
     }
