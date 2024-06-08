@@ -1,184 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
+    <link rel="shortcut icon" type="image/x-icon" href="companyLogo/aerobg.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>AeroTracker</title>
     <link rel="stylesheet" href="style/style.css" />
     <link rel="stylesheet" href="style/about.css" />
-    <link rel="stylesheet" href="style/navbar.css">
-</head>
+    <link rel="stylesheet" href="style/navbar.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
 
-<body>
+  <body>
     <main>
-        <header>
-            <nav class="navbar">
-                <div><a href="index.html" class="brand-title">Dashboard</a></div>
-                <a href="javascript:void(0);" class="toggle-button" id="toggle-button">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </a>
-                <div class="navbar-links" id="navbar-links">
-                    <ul>
-                        <li><a href="about.html" class="about">About</a></li>
-                        <li>
-                            <input type="checkbox" class="darkmodeInput" id="darkmode-toggle" value="darkmode" />
-                            <label class="darkmode" for="darkmode-toggle"></label>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+      <header>
+        <nav class="navbar">
+          <div>
+            <a href="index.html" class="brand-title">Dashboard</a>
+          </div>
+          <a
+            href="javascript:void(0);"
+            class="toggle-button"
+            id="toggle-button"
+          >
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </a>
+          <div class="navbar-links" id="navbar-links">
+            <ul>
+              <li><a href="about.html" class="about">About</a></li>
+              <li>
+                <input
+                  type="checkbox"
+                  class="darkmodeInput"
+                  id="darkmode-toggle"
+                  value="darkmode"
+                />
+                <label class="darkmode" for="darkmode-toggle"></label>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
 
-        <section class="thanks">
-            <div class="tag-thanks">
-                <div class="wave">
-                    <h1 class="thanks-title">Thanks To</h1>
-                </div>
+      <section class="thanks">
+        <div class="tag-thanks">
+          <div class="wave">
+            <h1 class="thanks-title">Thanks To</h1>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sections for each role -->
+      <section class="front-end">
+        <div class="wrap-front-end">
+          <div class="tag-role">
+            <h1>Project Manager</h1>
+          </div>
+          <div class="wrap-cards">
+            <div class="card" data-aos="fade-down">
+              <img src="asset/Aldiansyah A.jPg" alt="" />
+              <div class="card-text" data-aos="fade-down">
+                <p>Aldiansyah Al'ayyubi</p>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Sections for each role -->
-        <section class="front-end">
-            <div class="wrap-front-end">
-                <div class="tag-role">
-                    <h1>Project Manager</h1>
-                </div>
-                <div class="wrap-cards">
-                    <div class="card">
-                        <img src="asset/Aldiansyah A.jPg" alt="" />
-                        <div class="card-text">
-                            <p>Aldiansyah Al'ayyubi</p>
-                        </div>
-                    </div>
-                </div>
+      <section class="front-end">
+        <div class="wrap-front-end">
+          <div class="tag-role">
+            <h1>Front End</h1>
+          </div>
+          <div class="wrap-cards">
+            <div class="card" data-aos="fade-down">
+              <img src="asset/Muhammad Nahrul Hayat.jpg" alt="" />
+              <div class="card-text">
+                <p>Muhammad Nahrul Hayat</p>
+              </div>
             </div>
-        </section>
-
-        <section class="front-end">
-            <div class="wrap-front-end">
-                <div class="tag-role">
-                    <h1>Front End</h1>
-                </div>
-                <div class="wrap-cards">
-                    <div class="card">
-                        <img src="asset/Muhammad Nahrul Hayat.jpg" alt="" />
-                        <div class="card-text">
-                            <p>Muhammad Nahrul Hayat</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="asset/Muhammad Dzakwan.jpg" alt="" />
-                        <div class="card-text">
-                            <p>Muhammad Dzakwan</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="asset/Manikha Meyyuliarti Nurozi.png" alt="" />
-                        <div class="card-text">
-                            <p>Manikha Meyyuliarti Nurozi</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="asset/Barra Fadhil Afkar.jpg" alt="" />
-                        <div class="card-text">
-                            <p>Barra Fadhil Afkar</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="card" data-aos="fade-down">
+              <img src="asset/Muhammad Dzakwan.jpg" alt="" />
+              <div class="card-text">
+                <p>Muhammad Dzakwan</p>
+              </div>
             </div>
-        </section>
-
-        <section class="front-end">
-            <div class="wrap-front-end">
-                <div class="tag-role">
-                    <h1>QA</h1>
-                </div>
-                <div class="wrap-cards">
-                    <div class="card">
-                        <img src="asset/kartika.jpg" alt="" />
-                        <div class="card-text">
-                            <p>Kartika Firci</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="asset/Aura.jpg" alt="" />
-                        <div class="card-text">
-                            <p>Aura Sutra Mahrani
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="asset/Alsakina Cesara Supena.jpg" alt="" />
-                        <div class="card-text">
-                            <p>Alsakina Cesara Supena</p>
-                        </div>
-                    </div>
-
-                </div>
+            <div class="card" data-aos="fade-down">
+              <img src="asset/Manikha Meyyuliarti Nurozi.png" alt="" />
+              <div class="card-text">
+                <p>Manikha Meyyuliarti Nurozi</p>
+              </div>
             </div>
-        </section>
-
-        <section class="front-end">
-            <div class="wrap-front-end">
-                <div class="tag-role">
-                    <h1>DevOps</h1>
-                </div>
-                <div class="wrap-cards">
-                    <div class="card">
-                        <img src="asset/Annajwa Shohibuzzahro.png" alt="" />
-                        <div class="card-text">
-                            <p>Annajwa Shohibuzzahro</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="asset/Raihan Putra Pamungkas.JPG" alt="" />
-                        <div class="card-text">
-                            <p>Raihan Putra Pamungkas</p>
-                        </div>
-                    </div>
-
-                </div>
+            <div class="card" data-aos="fade-down">
+              <img src="asset/Barra Fadhil Afkar.jpg" alt="" />
+              <div class="card-text">
+                <p>Barra Fadhil Afkar</p>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section class="front-end">
-            <div class="wrap-entiere">
-                <div class="wrap-front-end">
-                    <div class="tag-role">
-                        <h1>Pitch Deck</h1>
-                    </div>
-                    <div class="wrap-entier"></div>
-                    <div class="wrap-cards">
-                        <div class="card">
-                            <img src="asset/Nurul Azmi Husna.jpg" alt="" />
-                            <div class="card-text">
-                                <p>Nurul Azmi Husna</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img src="asset/Mohammad Mustofal Ahyar.png" alt="" />
-                            <div class="card-text">
-                                <p>Mohammad Mustofal Ahyar</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img src="asset/Izkiyatur Rif_a Mayesty.jpg" alt="" />
-                            <div class="card-text">
-                                <p>Izkiyatur Rifa Mayesty</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+      <section class="front-end">
+        <div class="wrap-front-end">
+          <div class="tag-role">
+            <h1>QA</h1>
+          </div>
+          <div class="wrap-cards">
+            <div class="card" data-aos="fade-down">
+              <img src="asset/kartika.jpg" alt="" />
+              <div class="card-text">
+                <p>Kartika Firci</p>
+              </div>
             </div>
+            <div class="card" data-aos="fade-down">
+              <img src="asset/Aura.jpg" alt="" />
+              <div class="card-text">
+                <p>Aura Sutra Mahrani</p>
+              </div>
+            </div>
+            <div class="card" data-aos="fade-down">
+              <img src="asset/Alsakina Cesara Supena.jpg" alt="" />
+              <div class="card-text">
+                <p>Alsakina Cesara Supena</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        </section>
+      <section class="front-end">
+        <div class="wrap-front-end">
+          <div class="tag-role">
+            <h1>DevOps</h1>
+          </div>
+          <div class="wrap-cards">
+            <div class="card" data-aos="fade-down">
+              <img src="asset/Annajwa Shohibuzzahro.png" alt="" />
+              <div class="card-text">
+                <p>Annajwa Shohibuzzahro</p>
+              </div>
+            </div>
+            <div class="card" data-aos="fade-down">
+              <img src="asset/Raihan Putra Pamungkas.JPG" alt="" />
+              <div class="card-text">
+                <p>Raihan Putra Pamungkas</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="front-end">
+        <div class="wrap-entiere">
+          <div class="wrap-front-end">
+            <div class="tag-role">
+              <h1>Pitch Deck</h1>
+            </div>
+            <div class="wrap-entier"></div>
+            <div class="wrap-cards">
+              <div class="card" data-aos="fade-down">
+                <img src="asset/Nurul Azmi Husna.jpg" alt="" />
+                <div class="card-text">
+                  <p>Nurul Azmi Husna</p>
+                </div>
+              </div>
+              <div class="card" data-aos="fade-down">
+                <img src="asset/Mohammad Mustofal Ahyar.png" alt="" />
+                <div class="card-text">
+                  <p>Mohammad Mustofal Ahyar</p>
+                </div>
+              </div>
+              <div class="card" data-aos="fade-down">
+                <img src="asset/Izkiyatur Rif_a Mayesty.jpg" alt="" />
+                <div class="card-text">
+                  <p>Izkiyatur Rifa Mayesty</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="aerofooter-section">
+        <footer class="aerofooter">
+        </footer>
+        <div class="copyright"><h1>©2024 AeroCycle all rights reserved</h1></div>
+      </section>
     </main>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="script/style.js"></script>
-</body>
-
+  </body>
 </html>

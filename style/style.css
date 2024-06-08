@@ -185,7 +185,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-left: 60px;
-  margin-top: 100px;
+  margin-top: 80px;
   margin-bottom:10px;
 }
 
@@ -194,12 +194,14 @@ body {
   flex-direction: column;
 }
 
-.score-cards,
-.selectors {
+.score-cards {
   gap: 10px;
   display: flex;
   flex-direction: row;
   text-align: center;
+}
+.selectors{
+  gap:10px;
 }
 
 .score-card-revenue {
@@ -265,7 +267,7 @@ label {
   margin: auto;
   /* width: 350px; */
   margin-bottom: 154px;
-  margin-left: 100px;
+  margin-left: 65px;
 }
 
 .container-second-row {
@@ -584,8 +586,30 @@ a {
 /* .sales-details-section{
   margin-bottom: 10px;
 } */
-
-@media (max-width: 400px) {
+.aerofooter {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  background-image: url("/companyLogo/AeroCycle.png"); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  margin-left: 350px;
+  
+}
+.wrapp-all{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.copyright{
+  align-items: center;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
   }
@@ -596,21 +620,18 @@ a {
     /* position: fixed; */
     justify-content: center;
     align-items: center;
-    /* top: 4.5rem; */
-    /* Adjust position */
-    /* left: 0; */
     background-color: rgb(248, 248, 248);
     backdrop-filter: blur(5px);
     border: 2px solid black;
     color: black;
-    /* padding-top: 1rem; */
-    /* Adjust padding */
   }
   .about {
     color: black;
   }
   .navbar-links.active {
     display: flex;
+    align-items: center;
+    margin-left: 235px;
   }
   .navbar-links ul {
     flex-direction: column;
@@ -637,13 +658,13 @@ a {
     /* margin: 4px 0; */
   }
   .toggle-button.active .bar:nth-child(1) {
-    transform: rotate(45deg) translate(10px, 5px);
+    transform: rotate(45deg) translate(20px, 5px);
   }
   .toggle-button.active .bar:nth-child(2) {
     opacity: 0;
   }
   .toggle-button.active .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(10px, -5px);
+    transform: rotate(-45deg) translate(20px, -5px);
   }
   .container-first-row,
   .container-third-row {
@@ -673,11 +694,11 @@ a {
     display: flex;
   }
   .container-second-row {
-    display: block;
+    display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-left: 75px;
+    margin-left: 190px;
   }
 
   .range {
@@ -713,7 +734,7 @@ a {
   .selectors {
     display: flex;
     justify-content: center;
-    margin-right: 100px;
+    margin-right: 70px;
   }
   .range {
     display: flex;
@@ -756,8 +777,8 @@ a {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-left: 10px;
-    width: 360px;
+    /* margin-left: 10px; */
+    width: 380px;
     height: 250px;
   }
   .sizing-bar {
@@ -804,5 +825,97 @@ a {
     border: 2px solid black;
     border-radius: 10px;
     background-color: white;
+  }
+  .aerofooter{
+    margin-left:200px ;
+  }
+}
+@media (max-width: 400px) {
+  .wrap-entire-table {
+    width: 100%;
+    overflow: auto;
+  }
+  .container-second-row {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 95px;
+  }
+  .line-chart-label {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 200px;
+  }
+  .wrap-line-chart {
+    display: flex;
+    width: 380px;
+    height: 250px;
+    margin-left: 180px;
+  }
+  .sizing-line {
+    width: 370px;
+    height: 200px;
+    display: block;
+    justify-content: center;
+  }
+  .table-gender {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* margin-left: 10px; */
+    width: 380px;
+    height: 250px;
+  }
+  .sizing-bar {
+    display: flex;
+    width: 350px;
+    height: 180px;
+    align-items: center;
+    justify-content: center;
+  }
+  /* .filterLine {
+    width: 80px;
+  } */
+  /* .second-row-bar {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 320px;
+    flex-direction: column;
+  } */
+  h1 {
+    text-align: center;
+  }
+  .text-positioning {
+    text-align: center;
+    padding-right: 100px;
+  }
+  /* #filteringByYear {
+    margin-left: 120px;
+    margin-bottom: 10px;
+    color: black;
+  } */
+  .filter {
+    display: none;
+  }
+  .filter-position {
+    /* margin-bottom: 35px; */
+    display: flex;
+    text-align: center;
+    gap: 0px;
+  }
+  .year-style {
+    width: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+  }
+  .aerofooter{
+    margin-left:100px ;
   }
 }
