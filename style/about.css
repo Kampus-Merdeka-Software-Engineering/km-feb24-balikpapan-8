@@ -63,6 +63,11 @@ img{
   text-align: center;
   font-weight: bold;
 }
+.copyright{
+  align-items: center;
+  text-align: center;
+}
+
 @media (max-width: 600px) {
   .tag-thanks{
     margin-top: 10px;
@@ -80,5 +85,8 @@ img{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  .aerofooter{
+    margin-left:90px ;
   }
 }
