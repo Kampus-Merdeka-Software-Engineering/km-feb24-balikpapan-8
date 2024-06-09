@@ -24,7 +24,7 @@ function darkmodeToggle() {
   body.style.transition = "background-color 0.5s, background 0.5s";
   darkmodeCheckbox.addEventListener("change", () => {
     if (darkmodeCheckbox.checked) {
-      console.log("Dark mode is on");
+     
       body.style.background = "rgb(68, 1, 194)";
       for (let i = 0; i < salesperformance.length; i++) {
         salesperformance[i].style.color = "white";

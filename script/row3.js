@@ -9,7 +9,7 @@ fetch("./data/topProduct.json")
     return response.json();
   })
   .then(function (data) {
-    console.log(data);
+    
     Top5Product(data,"bar")
   });
 
@@ -52,7 +52,7 @@ function age(data) {
       return response.json(); // You need to return the parsed JSON data here
     })
     .then((data) => {
-      console.log(data);
+      
     })
     .catch((error) => {
       console.error("Error fetching sales data:", error);

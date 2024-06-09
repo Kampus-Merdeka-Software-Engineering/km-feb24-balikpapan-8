@@ -73,7 +73,6 @@ body {
   right: 0;
   box-sizing: border-box;
   width: 100%;
-  margin-bottom: 10px;
   color: white;
   /* z-index: 1000; */
 }
@@ -182,11 +181,12 @@ body {
 .container-first-row {
   display: flex;
   flex-direction: row;
-  /* justify-content: center; */
   border-color: #000000;
   align-items: center;
   justify-content: center;
   margin-left: 60px;
+  margin-top: 80px;
+  margin-bottom: 10px;
 }
 
 .container {
@@ -194,12 +194,15 @@ body {
   flex-direction: column;
 }
 
-.score-cards,
-.selectors {
+.score-cards {
   gap: 10px;
   display: flex;
   flex-direction: row;
   text-align: center;
+}
+
+.selectors {
+  gap: 10px;
 }
 
 .score-card-revenue {
@@ -266,7 +269,7 @@ label {
   margin: auto;
   /* width: 350px; */
   margin-bottom: 154px;
-  margin-left: 100px;
+  margin-left: 65px;
 }
 
 .container-second-row {
@@ -277,7 +280,7 @@ label {
   border-color: #000000;
   border-radius: 10px;
   border: #000000;
-  margin-right: 200px;
+  margin-right: 390px;
 }
 
 .filter-position {
@@ -320,16 +323,16 @@ label {
 
 .wrap-line-chart {
   display: flex;
+  justify-content: center;
   width: 650px;
   height: 250px;
-  margin-left: 10px;
   border-radius: 10px;
   background: linear-gradient(100deg, #2109fa, rgb(1, 170, 248));
 }
 
 .wrap-category {
   display: flex;
-  width: 500px;
+  width: 0px;
   height: 250px;
   /* border: 2px solid black; */
   border-radius: 10px;
@@ -343,7 +346,7 @@ label {
 .second-row-bar {
   display: block;
   flex-direction: column;
-  width: 400px;
+  width: 200px;
 }
 
 .wrap-entire-row {
@@ -364,7 +367,7 @@ label {
 
 .filterLine {
   width: 100%;
-  height: 370px;
+  height: 100px;
   font-size: 15px;
 }
 
@@ -415,7 +418,7 @@ label {
   align-items: center;
   border-color: #000000;
   gap: 5px;
-  margin-right: 75px;
+  margin-right: 80px;
   /* padding-right: 20px; */
   /* margin-left: 30px; */
 }
@@ -611,46 +614,54 @@ a {
   margin-bottom: 10px;
 } */
 
+.aerofooter {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  background-image: url("/companyLogo/AeroCycle.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  margin-left: 350px;
+}
+
+.wrapp-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright {
+  align-items: center;
+  text-align: center;
+}
+
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
-  }
-  .navbar {
-    width: 100%;
-  }
-  .brand-title {
-    display: block;
-    width: 50%;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    /* Adjust position */
-    left: 0;
-    right: 0;
-    color: white;
   }
   .navbar-links {
     display: none;
     width: 50%;
     flex-direction: column;
-    position: fixed;
+    /* position: fixed; */
     justify-content: center;
     align-items: center;
-    top: 4.5rem;
-    /* Adjust position */
-    left: 0;
     background-color: rgb(248, 248, 248);
     backdrop-filter: blur(5px);
     border: 2px solid black;
     color: black;
-    padding-top: 1rem;
-    /* Adjust padding */
   }
   .about {
     color: black;
   }
   .navbar-links.active {
     display: flex;
+    align-items: center;
+    margin-left: 235px;
   }
   .navbar-links ul {
     flex-direction: column;
@@ -658,7 +669,7 @@ a {
   }
   .navbar-links ul li {
     text-align: center;
-    margin: 1rem 0;
+    /* margin: 1rem 0; */
   }
   .toggle-button {
     display: flex;
@@ -674,16 +685,16 @@ a {
     height: 3px;
     width: 25px;
     /* background-color: rgb(255, 255, 255); */
-    margin: 4px 0;
+    /* margin: 4px 0; */
   }
   .toggle-button.active .bar:nth-child(1) {
-    transform: rotate(45deg) translate(10px, 5px);
+    transform: rotate(45deg) translate(20px, 5px);
   }
   .toggle-button.active .bar:nth-child(2) {
     opacity: 0;
   }
   .toggle-button.active .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(10px, -5px);
+    transform: rotate(-45deg) translate(20px, -5px);
   }
   .container-first-row,
   .container-third-row {
@@ -696,6 +707,14 @@ a {
     margin-right: 0px;
     display: flex;
   }
+  .wrap-category {
+    display: flex;
+    width: 0px;
+    height: 250px;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    margin-right: 500px;
+  }
   .wrap-entire-row {
     display: block;
     justify-content: center;
@@ -705,10 +724,11 @@ a {
     display: flex;
   }
   .container-second-row {
-    display: block;
+    display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    margin-left: 190px;
   }
   .range {
     text-align: center;
@@ -746,7 +766,7 @@ a {
   .selectors {
     display: flex;
     justify-content: center;
-    margin-right: 100px;
+    margin-right: 70px;
   }
   .range {
     display: flex;
@@ -760,11 +780,8 @@ a {
   .select-country {
     margin-top: 20px;
   }
-  .barChart {
-    margin: 10px;
-  }
   .wrap-entire-table {
-    width: 90%;
+    width: 100%;
     overflow: auto;
   }
   .line-chart-label {
@@ -778,14 +795,13 @@ a {
     display: flex;
     width: 380px;
     height: 250px;
-    justify-content: center;
-    align-items: center;
     margin-left: 180px;
   }
   .sizing-line {
-    width: 380px;
-    height: 250px;
-    display: flex;
+    width: 370px;
+    height: 200px;
+    display: block;
+    justify-content: center;
   }
   .table-gender {
     display: flex;
@@ -802,17 +818,17 @@ a {
     align-items: center;
     justify-content: center;
   }
-  .filterLine {
-    width: 100xp;
-  }
-  .second-row-bar {
+  /* .filterLine {
+    width: 80px;
+  } */
+  /* .second-row-bar {
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 320px;
     flex-direction: column;
-  }
+  } */
   h1 {
     text-align: center;
   }
@@ -820,20 +836,19 @@ a {
     text-align: center;
     padding-right: 100px;
   }
-  #filteringByYear {
-    float: left;
-    margin-left: 0px;
+  /* #filteringByYear {
+    margin-left: 120px;
     margin-bottom: 10px;
     color: black;
-  }
+  } */
   .filter {
     display: none;
   }
   .filter-position {
-    margin-bottom: 35px;
+    /* margin-bottom: 35px; */
     display: flex;
     text-align: center;
-    gap: 5px;
+    gap: 0px;
   }
   .year-style {
     width: 50px;
@@ -850,73 +865,12 @@ a {
   .navbar-links {
     display: none;
     width: 100%;
-    flex-direction: column;
-    position: fixed;
-    justify-content: center;
-    align-items: center;
-    top: 4.5rem;
-    /* Adjust position */
-    left: 0;
-    background-color: rgb(248, 248, 248);
-    backdrop-filter: blur(5px);
-    border: 2px solid black;
-    color: black;
-    padding-top: 1rem;
-    /* Adjust padding */
+    overflow: auto;
   }
-  .about {
-    color: black;
-  }
-  .navbar-links.active {
+  .container-second-row {
     display: flex;
-  }
-  .navbar-links ul {
-    flex-direction: column;
-    width: 40%;
-  }
-  .navbar-links ul li {
-    text-align: center;
-    margin: 1rem 0;
-  }
-  .toggle-button {
-    display: flex;
-    /* position: ; */
-    top: 1rem;
-    /* Adjust position */
-    right: 1rem;
-    /* padding-right: 200px; */
-    z-index: 999;
-    /* Ensure it's above other content */
-  }
-  .toggle-button .bar {
-    height: 3px;
-    width: 25px;
-    /* background-color: rgb(255, 255, 255); */
-    margin: 4px 0;
-  }
-  .toggle-button.active .bar:nth-child(1) {
-    transform: rotate(45deg) translate(10px, 5px);
-  }
-  .toggle-button.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-  .toggle-button.active .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(10px, -5px);
-  }
-  .container-first-row,
-  .container-third-row {
     justify-content: center;
-    align-items: center;
     flex-direction: column;
-    padding-right: 0px;
-    padding-left: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    display: flex;
-  }
-  .wrap-entire-row {
-    display: block;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     /* padding-right: 40px; */
@@ -991,14 +945,13 @@ a {
     display: flex;
     width: 380px;
     height: 250px;
-    justify-content: center;
-    align-items: center;
     margin-left: 180px;
   }
   .sizing-line {
-    width: 380px;
-    height: 250px;
-    display: flex;
+    width: 370px;
+    height: 200px;
+    display: block;
+    justify-content: center;
   }
   .table-gender {
     display: flex;
@@ -1015,17 +968,17 @@ a {
     align-items: center;
     justify-content: center;
   }
-  .filterLine {
-    width: 100xp;
-  }
-  .second-row-bar {
+  /* .filterLine {
+    width: 80px;
+  } */
+  /* .second-row-bar {
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 320px;
     flex-direction: column;
-  }
+  } */
   h1 {
     text-align: center;
   }
@@ -1033,25 +986,27 @@ a {
     text-align: center;
     padding-right: 100px;
   }
-  #filteringByYear {
-    float: left;
-    margin-left: 0px;
+  /* #filteringByYear {
+    margin-left: 120px;
     margin-bottom: 10px;
     color: black;
-  }
+  } */
   .filter {
     display: none;
   }
   .filter-position {
-    margin-bottom: 35px;
+    /* margin-bottom: 35px; */
     display: flex;
     text-align: center;
-    gap: 5px;
+    gap: 0px;
   }
   .year-style {
     width: 50px;
     border: 2px solid black;
     border-radius: 10px;
     background-color: white;
+  }
+  .aerofooter {
+    margin-left: 100px;
   }
 }
