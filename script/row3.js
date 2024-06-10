@@ -42,6 +42,7 @@ function Top5Product(data, type) {
     },
   });
 }
+
 function age(data) {
   fetch("./data/genderandage.json")
     .then((response) => {
