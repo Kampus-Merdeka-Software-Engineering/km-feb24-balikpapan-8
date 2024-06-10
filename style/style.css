@@ -732,12 +732,7 @@ a {
   }
   .range {
     text-align: center;
-  }
-  section {
-    padding-right: 0px;
-    padding-left: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-right: 260px;
   }
   .score-cards {
     flex-direction: column;
@@ -808,7 +803,8 @@ a {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width: 350px;
+    /* margin-left: 10px; */
+    width: 380px;
     height: 250px;
   }
   .sizing-bar {
@@ -856,83 +852,22 @@ a {
     border-radius: 10px;
     background-color: white;
   }
+  .aerofooter {
+    margin-left: 200px;
+  }
 }
 
 @media (max-width: 400px) {
-  body {
-    overflow-x: hidden;
-  }
-  .navbar-links {
-    display: none;
-    width: 100%;
-    overflow: auto;
-  }
-  .container-second-row {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    flex-direction: column;
-    /* padding-right: 40px; */
-    display: flex;
-  }
-  .container-second-row {
-    display: block;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-  .range {
-    text-align: center;
-    margin-right: 260px;
-  }
-  .score-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-  .table-top-product {
-    background-color: white;
-    width: 300px;
-    height: 400px;
-    padding-left: 100px;
-    margin: 10px;
-    justify-content: space-evenly;
-    align-items: center;
-    overflow-x: auto;
-    border-radius: 10px;
-  }
-  .score-card-revenue,
-  .score-card-profit,
-  .score-card-item {
-    width: 100%;
-    max-width: 300px;
-    /* Optional: Set a max-width for each card on smaller screens */
-    justify-content: center;
-    align-items: center;
-  }
-  .selectors {
-    display: flex;
-    justify-content: center;
-    margin-right: 100px;
-  }
-  .range {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .select-year {
-    margin-top: 20px;
-    /* Space between the year filter and revenue card */
-  }
-  .select-country {
-    margin-top: 20px;
-  }
-  .barChart {
-    margin: 10px;
-  }
   .wrap-entire-table {
-    width: 90%;
+    width: 100%;
     overflow: auto;
+  }
+  .container-second-row {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 95px;
   }
   .line-chart-label {
     text-align: center;
@@ -958,7 +893,8 @@ a {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width: 350px;
+    /* margin-left: 10px; */
+    width: 380px;
     height: 250px;
   }
   .sizing-bar {

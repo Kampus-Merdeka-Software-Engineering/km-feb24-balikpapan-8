@@ -33,8 +33,6 @@ function fetchDataAndCalculateTotals() {
       Rev.textContent = `$${totalRevenue}`;
       prof.textContent = `$${totalProfit}`;
       Isold.textContent = `${totalItemSold}`;
-
-      
     })
     .catch((error) => {
       console.error("There was a problem with the fetch operation:", error);
@@ -54,7 +52,7 @@ function country() {
     let totalIsold;
     let selectedCountry = countrySelect.value;
     let selectedYear = yearSelect.value;
-    
+
     if (!selectedCountry && !selectedYear) {
       fetchDataAndCalculateTotals();
     }
