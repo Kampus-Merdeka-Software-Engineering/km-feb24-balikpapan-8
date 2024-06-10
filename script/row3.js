@@ -9,21 +9,20 @@ fetch("./data/topProduct.json")
     return response.json();
   })
   .then(function (data) {
-    
-    Top5Product(data,"bar")
+    Top5Product(data, "bar");
   });
 
-function Top5Product(data,type) {
+function Top5Product(data, type) {
   new Chart(TopProduct, {
     type: type,
     data: {
-      labels:data.map(row => row.ProductName),
+      labels: data.map((row) => row.ProductName),
       datasets: [
         {
           label: "Top 5 product ",
-          data: data.map(row => row.revenue),
+          data: data.map((row) => row.revenue),
           borderWidth: 1,
-          backgroundColor:'rgba(241, 196, 15, 1)',
+          backgroundColor: "rgba(241, 196, 15, 1)",
         },
       ],
     },
@@ -32,10 +31,10 @@ function Top5Product(data,type) {
         y: {
           beginAtZero: true,
         },
-        x:{
-          ticks:{
-            font:{
-              size:9,
+        x: {
+          ticks: {
+            font: {
+              size: 9,
             },
           },
         },
@@ -51,9 +50,7 @@ function age(data) {
       }
       return response.json(); // You need to return the parsed JSON data here
     })
-    .then((data) => {
-      
-    })
+    .then((data) => {})
     .catch((error) => {
       console.error("Error fetching sales data:", error);
     });
