@@ -1,8 +1,8 @@
 @media (max-width: 400px) {
   .navbar {
     width: 100%;
+    z-index: 9999;
   }
-
   .navbar-links {
     display: none;
     width: 100%;
