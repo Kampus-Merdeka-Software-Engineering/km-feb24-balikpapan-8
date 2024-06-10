@@ -7,7 +7,7 @@ async function getData() {
 
     const productSumsMap = {};
 
-    data.bikesalesdata.forEach((user) => {
+    data.bikesalesdata.forEach((sale) => {
       const {
         Product,
         Product_Category,
@@ -15,10 +15,12 @@ async function getData() {
         Revenue,
         Profit,
         Order_Quantity,
-      } = user;
+      } = sale;
 
-      if (!productSumsMap[Product]) {
-        productSumsMap[Product] = {
+      const key = `${Product}-${Country}`;
+
+      if (!productSumsMap[key]) {
+        productSumsMap[key] = {
           Product,
           Product_Category,
           Country,
@@ -28,9 +30,9 @@ async function getData() {
         };
       }
 
-      productSumsMap[Product].Revenue += parseFloat(Revenue);
-      productSumsMap[Product].Profit += parseFloat(Profit);
-      productSumsMap[Product].Order_Quantity += parseInt(Order_Quantity, 10);
+      productSumsMap[key].Revenue += parseFloat(Revenue);
+      productSumsMap[key].Profit += parseFloat(Profit);
+      productSumsMap[key].Order_Quantity += parseInt(Order_Quantity, 10);
     });
 
     productSums = Object.values(productSumsMap);
