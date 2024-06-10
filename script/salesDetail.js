@@ -8,7 +8,14 @@ async function getData() {
     const productSumsMap = {};
 
     data.bikesalesdata.forEach((user) => {
-      const { Product, Product_Category, Country, Revenue, Profit, Order_Quantity } = user;
+      const {
+        Product,
+        Product_Category,
+        Country,
+        Revenue,
+        Profit,
+        Order_Quantity,
+      } = user;
 
       if (!productSumsMap[Product]) {
         productSumsMap[Product] = {
@@ -30,21 +37,21 @@ async function getData() {
     populateTable(productSums);
 
     // Initialize DataTable after the table has been populated
-    $('#myTable').DataTable({
+    $("#myTable").DataTable({
       columnDefs: [
         {
           targets: [0],
-          orderData: [0, 1]
+          orderData: [0, 1],
         },
         {
           targets: [1],
-          orderData: [1, 0]
+          orderData: [1, 0],
         },
         {
           targets: [4],
-          orderData: [4, 0]
-        }
-      ]
+          orderData: [4, 0],
+        },
+      ],
     });
   } catch (error) {
     console.error("Error fetching data:", error);

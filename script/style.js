@@ -24,7 +24,6 @@ function darkmodeToggle() {
   body.style.transition = "background-color 0.5s, background 0.5s";
   darkmodeCheckbox.addEventListener("change", () => {
     if (darkmodeCheckbox.checked) {
-     
       body.style.background = "rgb(68, 1, 194)";
       for (let i = 0; i < salesperformance.length; i++) {
         salesperformance[i].style.color = "white";
@@ -47,8 +46,7 @@ function darkmodeToggle() {
 
 darkmodeToggle();
 // Function to set the default body color
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   // document.body.style.background = "linear-gradient(135deg, #f1f512, #b9750e)";
   document.body.style.background = "white";
 });
-

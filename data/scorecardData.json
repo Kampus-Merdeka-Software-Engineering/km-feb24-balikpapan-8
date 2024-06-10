@@ -1,16 +1,46 @@
 {
-  "scorecard": {
-    "United Kingdom": {
-      "2015": { "revenue": 2220143, "profit": 1014085, "itemSold": 33439 },
-      "2016": { "revenue": 2600379, "profit": 1103233, "itemSold": 43194 }
+  "scorecard": [
+    {
+      "country": "United Kingdom",
+      "year": 2015,
+      "revenue": 2220143,
+      "profit": 1014085,
+      "itemsSold": 33439
     },
-    "France": {
-      "2015": { "revenue": 1871282, "profit": 646498, "itemSold": 26345 },
-      "2016": { "revenue": 1800511, "profit": 635646, "itemSold": 36399 }
+    {
+      "country": "United Kingdom",
+      "year": 2016,
+      "revenue": 2600379,
+      "profit": 1103233,
+      "itemsSold": 43194
     },
-    "Germany": {
-      "2015": { "revenue": 1925113, "profit": 714038, "itemSold": 24924 },
-      "2016": { "revenue": 2220143, "profit": 859379, "itemSold": 36514 }
+    {
+      "country": "France",
+      "year": 2015,
+      "revenue": 1871282,
+      "profit": 646498,
+      "itemsSold": 26345
+    },
+    {
+      "country": "France",
+      "year": 2016,
+      "revenue": 1800511,
+      "profit": 635646,
+      "itemsSold": 36399
+    },
+    {
+      "country": "Germany",
+      "year": 2015,
+      "revenue": 1925113,
+      "profit": 714038,
+      "itemsSold": 24924
+    },
+    {
+      "country": "Germany",
+      "year": 2016,
+      "revenue": 2220143,
+      "profit": 859379,
+      "itemsSold": 36514
     }
-  }
+  ]
 }
