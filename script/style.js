@@ -32,7 +32,7 @@ function darkmodeToggle() {
         h1Elements[k].style.color = "white";
       }
     } else {
-      console.log("Dark mode is off");
+     
       body.style.background = "white";
       for (let i = 0; i < salesperformance.length; i++) {
         salesperformance[i].style.color = "black";
