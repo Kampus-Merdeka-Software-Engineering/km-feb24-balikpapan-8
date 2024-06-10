@@ -8,12 +8,12 @@ async function getData() {
     const productSumsMap = {};
 
     data.bikesalesdata.forEach((user) => {
-      const { Product, Sub_Category, Country, Revenue, Profit, Order_Quantity } = user;
+      const { Product, Product_Category, Country, Revenue, Profit, Order_Quantity } = user;
 
       if (!productSumsMap[Product]) {
         productSumsMap[Product] = {
           Product,
-          Sub_Category,
+          Product_Category,
           Country,
           Revenue: 0,
           Profit: 0,
@@ -57,7 +57,7 @@ function populateTable(data) {
     table += `
       <tr>
           <td>${product.Product}</td>
-          <td>${product.Sub_Category}</td>
+          <td>${product.Product_Category}</td>
           <td>${product.Country}</td>
           <td>$${product.Revenue.toFixed(2)}</td>
           <td>$${product.Profit.toFixed(2)}</td>
